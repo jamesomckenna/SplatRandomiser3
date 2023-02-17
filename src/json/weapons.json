@@ -238,7 +238,7 @@
     "sub": "ink_mine",
     "special": "wave_breaker",
     "class": "chargers",
-    "img": "E-Liter_4K",
+    "img": "E-liter_4K",
     "stats": [96, 20, 15],
     "points": 210
   },
@@ -247,7 +247,7 @@
     "sub": "ink_mine",
     "special": "wave_breaker",
     "class": "chargers",
-    "img": "E-Liter_4K_Scope",
+    "img": "E-liter_4K_Scope",
     "stats": [100, 20, 5],
     "points": 210
   },
