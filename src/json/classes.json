@@ -1,0 +1,46 @@
+{
+  "shooters": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Damage", "Fire Rate"]
+  },
+  "rollers": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Ink Speed", "Handling"]
+  },
+  "chargers": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Charge Speed", "Mobility"]
+  },
+  "sloshers": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Damage", "Handling"]
+  },
+  "splatlings": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Charge Speed", "Mobility"]
+  },
+  "blasters": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Impact", "Fire Rate"]
+  },
+  "brushes": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Ink Speed", "Handling"]
+  },
+  "dualies": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Damage", "Mobility"]
+  },
+  "brellas": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Damage", "Durability"]
+  },
+  "stringers": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Charge Speed", "Mobility"]
+  },
+  "splatanas": {
+    "name": "Shooters",
+    "stat_name": ["Range", "Damage", "Handling"]
+  }
+}

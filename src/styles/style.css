@@ -1,0 +1,464 @@
+@font-face {
+    font-family: 'Splatoon1'; 
+    /* src: url('../fonts/otf/Splatoon1.otf'); */
+    src: url('../fonts/woff2/Splatoon1.woff2') format('woff2'), 
+    url('../fonts/woff/Splatoon1.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Splatoon2'; 
+    /* src: url('../fonts/otf/Splatoon2.otf'); */
+    src: url('../fonts/woff2/Splatoon2.woff2') format('woff2'), 
+    url('../fonts/woff/Splatoon2.woff') format('woff');
+    font-display: swap;
+}
+
+body {
+    font-family: Splatoon2, Arial, Helvetica, sans-serif;
+    background-color: #2A2F35;
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 24px;
+}
+
+
+/********** TEMPLATE IMAGE **********/
+.template {
+    width: 100%;
+    position: absolute;
+    opacity: 0.0; 
+    z-index: -10;
+}
+
+.template-container {
+    margin: auto;
+    max-width: 768px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .template-container {
+        max-width: 100%;
+    }
+}
+
+.template-container>img {
+    width: 100%;
+    height: auto;
+}
+
+
+/********** WEAPON RANDOMISER **********/
+.shell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weapon-container {
+    max-width: 768px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .weapon-container {
+        max-width: 100%;
+    }
+}
+
+.name-container {
+    font-family: Splatoon1, Arial, Helvetica, sans-serif;
+    font-size: 39px;
+    letter-spacing: -1px;
+    word-spacing: -4px;
+    padding-left: 7.5%;
+    padding-top: 2.2%;
+    padding-bottom: 1%;
+}
+
+@media only screen and (max-width: 768px) {
+    .name-container {
+        font-size: 5.1vw;
+        letter-spacing: calc(0.1vw * -1);
+        word-spacing: calc(0.5vw * -1);
+    }
+}
+
+.details-container {
+    display: flex;
+}
+
+.main-img {
+    display: block;
+    width: 37%;
+}
+
+.main-img-container{
+    margin: 10% 8% 0 19%;
+    background-color: #DDDDDD;
+    border-radius: 30%;
+}
+
+.main-img-container>img{
+    filter: drop-shadow(0 5px 0 #888888);
+}
+
+@media only screen and (max-width: 768px) {
+    .main-img-container>img{
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.info-container {
+    display: block;
+    width: 63%;
+}
+
+.stats-container {
+    padding-top: 12px;
+    font-size: 26px;
+    padding-top: 2.5%;
+    line-height: 165%;
+}
+
+@media only screen and (max-width: 768px) {
+    .stats-container {
+        font-size: 3.4vw;
+    }
+}
+
+.stat {
+    display: flex;
+    margin-right: 14%;
+}
+
+.stat-label-container {
+    display: block;
+    width: 52%;
+    text-align: right;
+}
+
+.stat-label {
+    padding-right: 2%;
+}
+
+.stat-bar {
+    display: block;
+    overflow: hidden;
+    background-color: #181B1F;
+    width: 48%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 2px;
+}
+
+.stat-value {
+    width: 0%;
+    height: 100%;
+    background-color: #DFAF00;
+    border-radius: 2px;
+}
+
+.sub-container,.special-container {
+    display: flex;
+    margin-bottom: 0.5%;
+}
+
+.sub-img,.special-img {
+    display: block;
+    width: 20%;
+}
+
+.img-container {
+    margin: 10.6% 6.4% 6.4% 19%;
+}
+
+.sub-img img,.special-img img{
+    width: 100%;
+    height: auto;
+}
+
+.sub-name,.special-name {
+    display: block;
+    width: 80%;
+    font-size: 34px;
+    padding-top: 5.4%;
+    padding-left: 2.1%;
+}
+
+@media only screen and (max-width: 768px) {
+    .sub-name,.special-name {
+        font-size: 4.5vw;
+    }
+}
+
+.points-container {
+    display: flex;
+    font-size: 39px;
+    letter-spacing: -0.7px;
+    word-spacing: 4px;
+    margin-top: 0.9%;
+}
+@media only screen and (max-width: 768px) {
+    .points-container {
+        font-size: 5.1vw;
+        letter-spacing: -0.1px;
+        word-spacing: 0;
+    }
+}
+
+.points-label {
+    display: block;
+    width: 50%;
+    padding-left: 56px;
+    padding-left: 7.3%;
+}
+
+.points-value {
+    display: block;
+    width: 50%;
+    text-align: right;
+    padding-right: 88px;
+    padding-right: 11.1%;
+}
+
+.button-container {
+    padding-top: 48px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+.randomise {
+    font-family: Splatoon2, Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 16px 36px;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: #DFAF00;
+    color: #181B1F;
+    border-radius: 2px;
+}
+
+.randomise:hover {
+    background-color: #b89000;
+}
+
+
+
+/********** LOADING PAGE **********/
+.loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2A2F35;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+}
+
+.loading-shell{
+    max-width: 768px;
+    width: 100%;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 40px;
+    background-color: #181B1F;
+    border-radius: 2px;
+}
+
+.loading-progress {
+    width: 0%;
+    height: 100%;
+    background-color: #DFAF00;
+    border-radius: 2px;
+}
+
+
+
+
+/********** PAGE SIDE NAVIGATION **********/
+.side_menu{
+    position: absolute;
+    z-index: 10;
+}
+
+.side_menu_content {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #181B1F;
+    overflow-x: hidden;
+    transition: 0.5s; 
+    white-space: nowrap;
+    width: 768px;
+    transform: translateX(-100%);
+}
+@media only screen and (max-width: 768px) {
+    .side_menu_content {
+        width: 100%;
+    }
+}
+
+.side_menu_content.open {
+    transform: translateX(0%);
+}
+
+.side_menu_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.side_menu_title {
+    font-family: Splatoon1, Arial, Helvetica, sans-serif;
+    padding: 16px 25px 0 25px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.side_menu_close {
+    font-family: Splatoon2, Arial, Helvetica, sans-serif;
+    border: none;
+    height: 60px;
+    width: 60px;
+    min-height: 60px;
+    min-width: 60px;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: #DFAF00;
+    color: #181B1F;
+    border-bottom-left-radius: 2px;
+    align-self: flex-start;
+}
+
+
+.side_menu_body {
+    padding: 0 25px;
+}
+
+
+.side_menu_nav {
+    padding-top: 25px;
+}
+@media only screen and (max-width: 768px) {
+    .side_menu_nav {
+        padding-top: 0;
+    }
+}
+
+
+.side_menu_nav>button {
+    font-family: Splatoon2, Arial, Helvetica, sans-serif;
+    border: none;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: #DFAF00;
+    color: #181B1F;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.weapon_card_container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px 20px -5px;
+}
+@media only screen and (max-width: 768px) {
+    .weapon_card_container{
+        justify-content: center;
+    }
+}
+
+.weapon_card_shell {
+    width: 100px;
+    margin: 5px 0;
+}
+
+.weapon_card {
+    margin: 0 5px;
+    background-color: #DDDDDD;
+    text-align: center;
+    display: block;
+    position: relative; 
+    white-space: normal;
+    border-radius: 5px;
+    line-height: 1.4;
+    user-select: none;
+}
+.weapon_card[data-selected="false"] {
+    background-color: #2A2F35;
+}
+
+.weapon_card_weapon{
+
+}
+
+.weapon_card_class {
+    height: 90px;
+    color: #181B1F;
+}
+.weapon_card_class[data-selected="false"] {
+    color: #DDDDDD;
+}
+
+.weapon_card_img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 5px 0 #888888);
+}
+
+.weapon_card_name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+@media only screen and (max-width: 768px) {
+    .weapon_card_name {
+        opacity: 1;
+    }
+}
+
+.weapon_card:hover{
+    cursor: pointer;
+}
+
+.weapon_card:hover .weapon_card_name{
+    opacity: 1;
+}
+
+
+.weapon_card[data-selected="false"] .weapon_card_img{
+    filter: grayscale(100%);
+}
+

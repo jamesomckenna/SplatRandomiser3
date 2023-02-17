@@ -1,0 +1,605 @@
+[
+  {
+    "name": ".52 Gal",
+    "sub": "splash_wall",
+    "special": "killer_wail_5.1",
+    "class": "shooters",
+    "img": "52_Gal",
+    "stats": [55, 75, 25],
+    "points": 190
+  },
+  {
+    "name": ".92 Gal",
+    "sub": "sprinkler",
+    "special": "ink_vac",
+    "class": "shooters",
+    "img": "96_Gal",
+    "stats": [74, 80, 10],
+    "points": 190
+  },
+  {
+    "name": "Aerospray MG",
+    "sub": "fizzy_bomb",
+    "special": "reefslider",
+    "class": "shooters",
+    "img": "Aerospray_MG",
+    "stats": [35, 10, 90],
+    "points": 190
+  },
+  {
+    "name": "H-3 Nozzlenose",
+    "sub": "point_sensor",
+    "special": "tacticooler",
+    "class": "shooters",
+    "img": "H-3_Nozzlenose",
+    "stats": [70, 58, 30],
+    "points": 190
+  },
+  {
+    "name": "Jet Squelcher",
+    "sub": "angle_shooter",
+    "special": "ink_vac",
+    "class": "shooters",
+    "img": "Jet_Squelcher",
+    "stats": [82, 35, 30],
+    "points": 190
+  },
+  {
+    "name": "L-3 Nozzlenose",
+    "sub": "curling_bomb",
+    "special": "crab_tank",
+    "class": "shooters",
+    "img": "L-3_Nozzlenose",
+    "stats": [62, 25, 65],
+    "points": 200
+  },
+  {
+    "name": "N-ZAP '85",
+    "sub": "suction_bomb",
+    "special": "tacticooler",
+    "class": "shooters",
+    "img": "N-ZAP_'85",
+    "stats": [50, 22, 75],
+    "points": 190
+  },
+  {
+    "name": "Splash-o-matic",
+    "sub": "burst_bomb",
+    "special": "crab_tank",
+    "class": "shooters",
+    "img": "Splash-o-matic",
+    "stats": [42, 28, 75],
+    "points": 200
+  },
+  {
+    "name": "Splattershot",
+    "sub": "suction_bomb",
+    "special": "trizooka",
+    "class": "shooters",
+    "img": "Splattershot",
+    "stats": [50, 47, 60],
+    "points": 190
+  },
+  {
+    "name": "Hero Shot Replica",
+    "sub": "suction_bomb",
+    "special": "trizooka",
+    "class": "shooters",
+    "img": "Hero_Shot_Replica",
+    "stats": [50, 47, 60],
+    "points": 190
+  },
+  {
+    "name": "Tentatek Splattershot",
+    "sub": "splat_bomb",
+    "special": "triple_inkstrike",
+    "class": "shooters",
+    "img": "Tentatek_Splattershot",
+    "stats": [50, 47, 60],
+    "points": 190
+  },
+  {
+    "name": "Splattershot Jr",
+    "sub": "splat_bomb",
+    "special": "big_bubbler",
+    "class": "shooters",
+    "img": "Splattershot_Jr",
+    "stats": [35, 22, 75],
+    "points": 180
+  },
+  {
+    "name": "Custom Splattershot Jr",
+    "sub": "torpedo",
+    "special": "wave_breaker",
+    "class": "shooters",
+    "img": "Custom_Splattershot_Jr",
+    "stats": [35, 22, 75],
+    "points": 190
+  },
+  {
+    "name": "Splattershot Pro",
+    "sub": "angle_shooter",
+    "special": "crab_tank",
+    "class": "shooters",
+    "img": "Splattershot_Pro",
+    "stats": [70, 60, 30],
+    "points": 180
+  },
+  {
+    "name": "Forge Splattershot Pro",
+    "sub": "suction_bomb",
+    "special": "booyah_bomb",
+    "class": "shooters",
+    "img": "Forge_Splattershot_Pro",
+    "stats": [70, 60, 30],
+    "points": 210
+  },
+  {
+    "name": "Splattershot Nova",
+    "sub": "point_sensor",
+    "special": "killer_wail_5.1",
+    "class": "shooters",
+    "img": "Splattershot_Nova",
+    "stats": [68, 20, 60],
+    "points": 190
+  },
+  {
+    "name": "Sploosh-o-matic",
+    "sub": "curling_bomb",
+    "special": "ultra_stamp",
+    "class": "shooters",
+    "img": "Sploosh-o-matic",
+    "stats": [12, 52, 75],
+    "points": 180
+  },
+  {
+    "name": "Squeezer",
+    "sub": "splash_wall",
+    "special": "trizooka",
+    "class": "shooters",
+    "img": "Squeezer",
+    "stats": [77, 52, 30],
+    "points": 200
+  },
+  {
+    "name": "Big Swig Roller",
+    "sub": "splash_wall",
+    "special": "ink_vac",
+    "class": "rollers",
+    "img": "Big_Swig_Roller",
+    "stats": [56, 54, 60],
+    "points": 200
+  },
+  {
+    "name": "Carbon Roller",
+    "sub": "autobomb",
+    "special": "zipcaster",
+    "class": "rollers",
+    "img": "Carbon_Roller",
+    "stats": [20, 63, 65],
+    "points": 180
+  },
+  {
+    "name": "Carbon Roller Deco",
+    "sub": "burst_bomb",
+    "special": "trizooka",
+    "class": "rollers",
+    "img": "Carbon_Roller_Deco",
+    "stats": [20, 63, 65],
+    "points": 200
+  },
+  {
+    "name": "Dynamo Roller",
+    "sub": "sprinkler",
+    "special": "tacticooler",
+    "class": "rollers",
+    "img": "Dynamo_Roller",
+    "stats": [76, 25, 20],
+    "points": 190
+  },
+  {
+    "name": "Flingza Roller",
+    "sub": "ink_mine",
+    "special": "tenta_missiles",
+    "class": "rollers",
+    "img": "Flingza_Roller",
+    "stats": [58, 45, 45],
+    "points": 210
+  },
+  {
+    "name": "Splat Roller",
+    "sub": "curling_bomb",
+    "special": "big_bubbler",
+    "class": "rollers",
+    "img": "Splat_Roller",
+    "stats": [48, 45, 55],
+    "points": 180
+  },
+  {
+    "name": "Bamboozler 14 Mk I",
+    "sub": "autobomb",
+    "special": "killer_wail_5.1",
+    "class": "chargers",
+    "img": "Bamboozler_14_Mk_I",
+    "stats": [78, 90, 80],
+    "points": 200
+  },
+  {
+    "name": "Classic Squiffer",
+    "sub": "point_sensor",
+    "special": "big_bubbler",
+    "class": "chargers",
+    "img": "Classic_Squiffer",
+    "stats": [75, 70, 60],
+    "points": 190
+  },
+  {
+    "name": "E-Liter 4K",
+    "sub": "ink_mine",
+    "special": "wave_breaker",
+    "class": "chargers",
+    "img": "E-Liter_4K",
+    "stats": [96, 20, 15],
+    "points": 210
+  },
+  {
+    "name": "E-Liter 4K Scope",
+    "sub": "ink_mine",
+    "special": "wave_breaker",
+    "class": "chargers",
+    "img": "E-Liter_4K_Scope",
+    "stats": [100, 20, 5],
+    "points": 210
+  },
+  {
+    "name": "Goo Tuber",
+    "sub": "torpedo",
+    "special": "tenta_missiles",
+    "class": "chargers",
+    "img": "Goo_Tuber",
+    "stats": [78, 38, 70],
+    "points": 200
+  },
+  {
+    "name": "Snipewriter 5H",
+    "sub": "sprinkler",
+    "special": "tacticooler",
+    "class": "chargers",
+    "img": "Snipewriter_5H",
+    "stats": [91, 43, 80],
+    "points": 200
+  },
+  {
+    "name": "Splat Charger",
+    "sub": "splat_bomb",
+    "special": "ink_vac",
+    "class": "chargers",
+    "img": "Splat_Charger",
+    "stats": [35, 50, 65],
+    "points": 200
+  },
+  {
+    "name": "Splatterscope",
+    "sub": "splat_bomb",
+    "special": "ink_vac",
+    "class": "chargers",
+    "img": "Splatterscope",
+    "stats": [91, 50, 30],
+    "points": 200
+  },
+  {
+    "name": "Bloblobber",
+    "sub": "sprinkler",
+    "special": "ink_storm",
+    "class": "sloshers",
+    "img": "Bloblobber",
+    "stats": [85, 29, 50],
+    "points": 190
+  },
+  {
+    "name": "Explosher",
+    "sub": "point_sensor",
+    "special": "ink_storm",
+    "class": "sloshers",
+    "img": "Explosher",
+    "stats": [77, 65, 20],
+    "points": 200
+  },
+  {
+    "name": "Slosher",
+    "sub": "splat_bomb",
+    "special": "triple_inkstrike",
+    "class": "sloshers",
+    "img": "Slosher",
+    "stats": [58, 85, 50],
+    "points": 200
+  },
+  {
+    "name": "Slosher Deco",
+    "sub": "angle_shooter",
+    "special": "zipcaster",
+    "class": "sloshers",
+    "img": "Slosher_Deco",
+    "stats": [35, 85, 50],
+    "points": 180
+  },
+  {
+    "name": "Sloshing Machine",
+    "sub": "fizzy_bomb",
+    "special": "booyah_bomb",
+    "class": "sloshers",
+    "img": "Sloshing_Machine",
+    "stats": [60, 90, 40],
+    "points": 220
+  },
+  {
+    "name": "Tri-Slosher",
+    "sub": "toxic_mist",
+    "special": "inkjet",
+    "class": "sloshers",
+    "img": "Tri-Slosher",
+    "stats": [31, 75, 70],
+    "points": 180
+  },
+  {
+    "name": "Ballpoint Splatling",
+    "sub": "fizzy_bomb",
+    "special": "inkjet",
+    "class": "splatlings",
+    "img": "Ballpoint_Splatling",
+    "stats": [84, 18, 60],
+    "points": 200
+  },
+  {
+    "name": "Heavy Splatling",
+    "sub": "sprinkler",
+    "special": "wave_breaker",
+    "class": "splatlings",
+    "img": "Heavy_Splatling",
+    "stats": [78, 38, 55],
+    "points": 200
+  },
+  {
+    "name": "Hydra Splatling",
+    "sub": "autobomb",
+    "special": "booyah_bomb",
+    "class": "splatlings",
+    "img": "Hydra_Splatling",
+    "stats": [85, 10, 20],
+    "points": 190
+  },
+  {
+    "name": "Mini Splatling",
+    "sub": "burst_bomb",
+    "special": "ultra_stamp",
+    "class": "splatlings",
+    "img": "Mini_Splatling",
+    "stats": [62, 80, 90],
+    "points": 180
+  },
+  {
+    "name": "Zink Mini Splatling",
+    "sub": "toxic_mist",
+    "special": "big_bubbler",
+    "class": "splatlings",
+    "img": "Zink_Mini_Splatling",
+    "stats": [62, 80, 90],
+    "points": 200
+  },
+  {
+    "name": "Nautilus 47",
+    "sub": "point_sensor",
+    "special": "ink_storm",
+    "class": "splatlings",
+    "img": "Nautilus_47",
+    "stats": [74, 37, 70],
+    "points": 190
+  },
+  {
+    "name": "Dapple Dualies",
+    "sub": "squid_beakon",
+    "special": "tacticooler",
+    "class": "dualies",
+    "img": "Dapple_Dualies",
+    "stats": [24, 47, 80],
+    "points": 180
+  },
+  {
+    "name": "Dapple Dualies Nouveau",
+    "sub": "torpedo",
+    "special": "reefslider",
+    "class": "dualies",
+    "img": "Dapple_Dualies_Nouveau",
+    "stats": [24, 47, 80],
+    "points": 190
+  },
+  {
+    "name": "Dark Tetra Dualies",
+    "sub": "autobomb",
+    "special": "reefslider",
+    "class": "dualies",
+    "img": "Dark_Tetra_Dualies",
+    "stats": [58, 22, 90],
+    "points": 200
+  },
+  {
+    "name": "Dualie Squelchers",
+    "sub": "splat_bomb",
+    "special": "wave_breaker",
+    "class": "dualies",
+    "img": "Dualie_Squelchers",
+    "stats": [70, 28, 70],
+    "points": 200
+  },
+  {
+    "name": "Glooga Dualies",
+    "sub": "splash_wall",
+    "special": "booyah_bomb",
+    "class": "dualies",
+    "img": "Glooga_Dualies",
+    "stats": [66, 76, 35],
+    "points": 180
+  },
+  {
+    "name": "Splat Dualies",
+    "sub": "suction_bomb",
+    "special": "crab_tank",
+    "class": "dualies",
+    "img": "Splat_Dualies",
+    "stats": [35, 50, 65],
+    "points": 190
+  },
+  {
+    "name": "Splat Brella",
+    "sub": "sprinkler",
+    "special": "triple_inkstrike",
+    "class": "brellas",
+    "img": "Splat_Brella",
+    "stats": [43, 65, 60],
+    "points": 190
+  },
+  {
+    "name": "Tenta Brella",
+    "sub": "squid_beakon",
+    "special": "ink_vac",
+    "class": "brellas",
+    "img": "Tenta_Brella",
+    "stats": [62, 85, 85],
+    "points": 190
+  },
+  {
+    "name": "Undercover Brella",
+    "sub": "ink_mine",
+    "special": "reefslider",
+    "class": "brellas",
+    "img": "Undercover_Brella",
+    "stats": [50, 30, 25],
+    "points": 180
+  },
+  {
+    "name": "Blaster",
+    "sub": "autobomb",
+    "special": "big_bubbler",
+    "class": "blasters",
+    "img": "Blaster",
+    "stats": [27, 70, 20],
+    "points": 180
+  },
+  {
+    "name": "Clash Blaster",
+    "sub": "splat_bomb",
+    "special": "trizooka",
+    "class": "blasters",
+    "img": "Clash_Blaster",
+    "stats": [21, 30, 65],
+    "points": 180
+  },
+  {
+    "name": "Luna Blaster",
+    "sub": "splat_bomb",
+    "special": "zipcaster",
+    "class": "blasters",
+    "img": "Luna_Blaster",
+    "stats": [18, 70, 30],
+    "points": 180
+  },
+  {
+    "name": "Luna Blaster Neo",
+    "sub": "fizzy_bomb",
+    "special": "ultra_stamp",
+    "class": "blasters",
+    "img": "Luna_Blaster_Neo",
+    "stats": [18, 70, 30],
+    "points": 180
+  },
+  {
+    "name": "Range Blaster",
+    "sub": "suction_bomb",
+    "special": "wave_breaker",
+    "class": "blasters",
+    "img": "Range_Blaster",
+    "stats": [56, 70, 10],
+    "points": 200
+  },
+  {
+    "name": "Rapid Blaster",
+    "sub": "ink_mine",
+    "special": "triple_inkstrike",
+    "class": "blasters",
+    "img": "Rapid_Blaster",
+    "stats": [62, 35, 40],
+    "points": 200
+  },
+  {
+    "name": "Rapid Blaster Pro",
+    "sub": "toxic_mist",
+    "special": "ink_vac",
+    "class": "blasters",
+    "img": "Rapid_Blaster_Pro",
+    "stats": [72, 35, 30],
+    "points": 180
+  },
+  {
+    "name": "Inkbrush",
+    "sub": "splat_bomb",
+    "special": "killer_wail_5.1",
+    "class": "brushes",
+    "img": "Inkbrush",
+    "stats": [5, 100, 100],
+    "points": 180
+  },
+  {
+    "name": "Inkbrush Nouveau",
+    "sub": "ink_mine",
+    "special": "ultra_stamp",
+    "class": "brushes",
+    "img": "Inkbrush_Nouveau",
+    "stats": [5, 100, 100],
+    "points": 180
+  },
+  {
+    "name": "Octobrush",
+    "sub": "suction_bomb",
+    "special": "zipcaster",
+    "class": "brushes",
+    "img": "Octobrush",
+    "stats": [23, 80, 85],
+    "points": 200
+  },
+  {
+    "name": "REEF-LUX 450",
+    "sub": "curling_bomb",
+    "special": "tenta_missiles",
+    "class": "stringers",
+    "img": "REEF-LUX_450",
+    "stats": [60, 75, 60],
+    "points": 210
+  },
+  {
+    "name": "Tri-Stringer",
+    "sub": "toxic_mist",
+    "special": "killer_wail_5.1",
+    "class": "stringers",
+    "img": "Tri-Stringer",
+    "stats": [88, 40, 40],
+    "points": 200
+  },
+  {
+    "name": "Splatana Stamper",
+    "sub": "burst_bomb",
+    "special": "zipcaster",
+    "class": "splatanas",
+    "img": "Splatana_Stamper",
+    "stats": [75, 43, 60],
+    "points": 200
+  },
+  {
+    "name": "Splatana Wiper",
+    "sub": "torpedo",
+    "special": "ultra_stamp",
+    "class": "splatanas",
+    "img": "Splatana_Wiper",
+    "stats": [58, 29, 75],
+    "points": 190
+  }
+]
