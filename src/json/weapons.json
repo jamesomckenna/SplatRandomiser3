@@ -27,6 +27,15 @@
     "points": 190
   },
   {
+    "name": "Aerospray RG",
+    "sub": "sprinkler",
+    "special": "booyah_bomb",
+    "class": "shooters",
+    "img": "Aerospray_RG",
+    "stats": [35, 10, 90],
+    "points": 200
+  },
+  {
     "name": "H-3 Nozzlenose",
     "sub": "point_sensor",
     "special": "tacticooler",

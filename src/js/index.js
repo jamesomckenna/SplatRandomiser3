@@ -36,10 +36,10 @@ window.addEventListener("load", (event) => {
     let image_type = 'png';
     let temp_canvas = document.createElement('canvas');
     if (!!(temp_canvas.getContext && temp_canvas.getContext('2d'))) {
-        if(temp_canvas.toDataURL('image/webp').indexOf('data:image/webp') == 0) {
+        if (temp_canvas.toDataURL('image/webp').indexOf('data:image/webp') == 0) {
             image_type = 'webp';
-        } 
-    } 
+        }
+    }
 
     data_promises.push(fetch('src/json/weapons.json')
         .then((response) => response.json())
@@ -61,22 +61,25 @@ window.addEventListener("load", (event) => {
         console.log('Data Loaded');
 
         let load_img_progress = 0;
-        let load_img_total = weapon_list.length + Object.keys(sub_list).length + Object.keys(special_list).length;
+        let load_img_total = weapon_list.length + Object.keys(sub_list).length + Object.keys(special_list).length + Object.keys(class_list).length;
 
         for (key in class_list) {
-            class_list[key].container = add_weapon_class_group(key, class_list[key].name);
-        }
+            class_list[key].img_obj = new Image(90, 90);
+            class_list[key].img_obj.alt = class_list[key].name;
+            class_list[key].img_obj.src = 'src/img/' + image_type + '/class/' + class_list[key].img + '.' + image_type;
 
-        // image 
+            img_promises.push(class_list[key].img_obj.decode()
+                .then(() => {
+                    update_load_screen();
+                }));
+        }
+ 
         weapon_list.sort(sort_weapons_alphabetically);
         weapon_list.forEach((element, index) => {
             let img_src = 'src/img/' + image_type + '/weapons/' + element.img + '.' + image_type;
             weapon_list[index].img_obj = new Image(205, 205);
             weapon_list[index].img_obj.alt = element.name;
             weapon_list[index].img_obj.src = img_src;
-
-            //add weapon checkbox
-            add_weapon_checkbox(index, element.name, img_src, class_list[weapon_list[index].class].container);
 
             img_promises.push(weapon_list[index].img_obj.decode()
                 .then(() => {
@@ -108,9 +111,18 @@ window.addEventListener("load", (event) => {
 
         Promise.all(img_promises).then(d => {
             console.log('Images Loaded');
-            randomise_weapon();
-            randomise_btn.disabled = false;
 
+            //add weapon checkbox
+            for (key in class_list) {
+                class_list[key].container = add_weapon_class_group(key, class_list[key].name, class_list[key].img_obj);
+            };
+
+            //add weapon checkbox
+            weapon_list.forEach((element, index) => {
+                add_weapon_checkbox(index, element.name, weapon_list[index].img_obj.src, class_list[weapon_list[index].class].container);
+            });
+
+            // init toggle functions for cards
             for (let i = 0; i < weapon_card_list.length; i++) {
                 weapon_card_list[i].addEventListener('click', function () {
                     if (this.dataset.selected == 'true') {
@@ -121,6 +133,38 @@ window.addEventListener("load", (event) => {
                 });
             }
 
+            for (let i = 0; i < weapon_card_class_list.length; i++) {
+                weapon_card_class_list[i].addEventListener("click", function () {
+                    let toggle = '';
+                    if (this.dataset.selected == 'true') {
+                        this.dataset.selected = 'false';
+                        toggle = 'OFF'
+                    } else {
+                        this.dataset.selected = 'true';
+                        toggle = 'ON'
+                    }
+                    this.children[1].innerHTML = 'ALL <br>'+ this.dataset.class.toUpperCase() +'<br>' + toggle;
+
+                    let class_group = this.dataset.class;
+                    let selected = this.dataset.selected;
+
+                    for (let j = 0; j < weapon_card_list.length; j++) {
+                        if (weapon_list[weapon_card_list[j].dataset.id].class == class_group || class_group == 'weapons') {
+                            weapon_card_list[j].dataset.selected = selected;
+                        } 
+                    }
+
+                    if(class_group == 'weapons'){
+                        for (let j = 0; j < weapon_card_class_list.length; j++) {
+                            weapon_card_class_list[j].dataset.selected = selected;
+                            weapon_card_class_list[j].children[1].innerHTML = 'ALL <br>'+ this.dataset.class.toUpperCase() +'<br>' + toggle;
+                        }
+                    }
+                });
+            }
+
+            randomise_weapon();
+            randomise_btn.disabled = false;
             loading_screen.style.display = 'none';
         });
 
@@ -135,23 +179,41 @@ window.addEventListener("load", (event) => {
     });
 
 
-    function sort_weapons_alphabetically( a, b ) {
-        if ( a.name < b.name ){
+    function sort_weapons_alphabetically(a, b) {
+        if (a.name < b.name) {
             return -1;
-        } else if ( a.name > b.name ){
+        } else if (a.name > b.name) {
             return 1;
         } else {
             return 0;
         }
     }
 
-    function add_weapon_class_group(class_id, class_name) {
-        let container = document.createElement("div");
-        container.classList.add("weapon_card_container");
-        container.dataset.class = class_id;
-        container.dataset.selected = 'true';
-        weapon_select_container.appendChild(container);
-        return container;
+    function add_weapon_class_group(class_id, class_name, class_img_obj) {
+        let card_container = document.createElement("div");
+        let shell = document.createElement("div");
+        let card = document.createElement("div");
+        let name = document.createElement("div");
+        let name_text = document.createTextNode('ALL '+class_name.toUpperCase() + ' ON');
+
+        card_container.classList.add("weapon_card_container");
+        card_container.dataset.class = class_id;
+        card_container.dataset.selected = 'true';
+        shell.classList.add("weapon_card_shell");
+        card.classList.add("weapon_card");
+        card.classList.add("weapon_card_class");
+        card.dataset.selected = 'true';
+        card.dataset.class = class_id;
+        class_img_obj.classList.add("weapon_card_img");
+        name.classList.add("weapon_card_name");
+
+        name.appendChild(name_text);
+        card.appendChild(class_img_obj);
+        card.appendChild(name);
+        shell.appendChild(card);
+        card_container.appendChild(shell);
+        weapon_select_container.appendChild(card_container);
+        return card_container;
     }
 
     function add_weapon_checkbox(weapon_index, weapon_name, weapon_img_url, card_container) {
@@ -178,8 +240,8 @@ window.addEventListener("load", (event) => {
         card_container.appendChild(shell);
     }
 
+
     function randomise_weapon() {
-        //craete selected weapon list
         let selected_weapon_list = [];
 
         for (let i = 0; i < weapon_card_list.length; i++) {
@@ -253,26 +315,5 @@ window.addEventListener("load", (event) => {
     main_shell.addEventListener("click", function () {
         close_side_menu();
     });
-
-
-    // toggle groups
-    for (let i = 0; i < weapon_card_class_list.length; i++) {
-        weapon_card_class_list[i].addEventListener("click", function () {
-            if (weapon_card_class_list[i].dataset.selected == 'true') {
-                weapon_card_class_list[i].dataset.selected = 'false'
-            } else {
-                weapon_card_class_list[i].dataset.selected = 'true';
-            }
-
-            let class_group = weapon_card_class_list[i].dataset.class;
-            let selected = weapon_card_class_list[i].dataset.selected;
-
-            for (let j = 0; j < weapon_card_list.length; j++) {
-                if(weapon_card_list[j].class == class_group || class_group == 'all'){
-                    weapon_card_list[j].dataset.selected = selected;
-                }
-            }
-        });
-    }
 
 });

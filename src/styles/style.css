@@ -245,7 +245,7 @@ body {
     font-size: 24px;
     background-color: #DFAF00;
     color: #181B1F;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .randomise:hover {
@@ -312,7 +312,6 @@ body {
     background-color: #181B1F;
     overflow-x: hidden;
     transition: 0.5s; 
-    white-space: nowrap;
     width: 768px;
     transform: translateX(-100%);
 }
@@ -336,6 +335,7 @@ body {
 .side_menu_title {
     font-family: Splatoon1, Arial, Helvetica, sans-serif;
     padding: 16px 25px 0 25px;
+    line-height: 1.4;
     word-wrap: break-word;
     white-space: normal;
 }
@@ -351,7 +351,7 @@ body {
     font-size: 24px;
     background-color: #DFAF00;
     color: #181B1F;
-    border-bottom-left-radius: 2px;
+    border-bottom-left-radius: 5px;
     align-self: flex-start;
 }
 
@@ -380,8 +380,8 @@ body {
     font-size: 24px;
     background-color: #DFAF00;
     color: #181B1F;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .weapon_card_container{
@@ -416,18 +416,19 @@ body {
 }
 
 .weapon_card_weapon{
-
+    font-size: 12px;
 }
 
 .weapon_card_class {
     height: 90px;
-    color: #181B1F;
+    font-size: 18px;
 }
 .weapon_card_class[data-selected="false"] {
     color: #DDDDDD;
 }
 
 .weapon_card_img {
+    display: block;
     width: 100%;
     height: auto;
     filter: drop-shadow(0 5px 0 #888888);
@@ -439,7 +440,6 @@ body {
     width: 100%;
     max-width: 100%;
     background-color: rgb(0, 0, 0, 0.4);
-    font-size: 12px;
     opacity: 0;
     transition: opacity 0.1s;
 }
@@ -447,6 +447,14 @@ body {
     .weapon_card_name {
         opacity: 1;
     }
+}
+
+.weapon_card_class>.weapon_card_name{
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .weapon_card:hover{

@@ -1,113 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Splatoon 3 Weapon Randomiser</title>
-  <meta name="description" content="Are you playing Splatoon 3 and don't know what weapon to pick? Want someone to pick for you? We've got you covered!">
-  <link rel="icon" type="image/x-icon" href="src/img/ico/splattershot.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="src/styles/style.css" />
-  <script src="src/js/index.js"></script>
-</head>
-<body>
-  <!-- <div class="template">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Splatoon 3 Weapon Randomizer</title>
+    <meta
+      name="description"
+      content="The Splatoon 3 weapon randomizer by James McKenna. Don't know what weapon to pick? We've got you covered!"
+    />
+    <link rel="icon" type="image/x-icon" href="src/img/ico/Shooter.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Splatoon 3 Weapon Randomizer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="The Splatoon 3 weapon randomizer by James McKenna. Don't know what weapon to pick? We've got you covered!" />
+    <meta property="og:url" content="https://jamesomckenna.github.io/SplatRandomiser3/" />
+    <meta property="og:image" content="https://jamesomckenna.github.io/SplatRandomiser3/src/img/png/class/All.png" />
+    
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <script src="src/js/index.js" defer></script>
+  </head>
+  <body>
+    <!-- <div class="template">
     <div class="template-container"><img src="src/img/png/Template.PNG" /></div>
   </div> -->
 
-  <!-- WEAPON CONTENT -->
-  <div id="main_shell" class="shell">
-    <div class="weapon-container">
-      <div id="weapon_name" class="name-container">Weapon Name</div>
-      <div class="details-container">
-        <div class="main-img">
-          <div id="weapon_img" class="main-img-container"></div>
+    <!-- WEAPON CONTENT -->
+    <div id="main_shell" class="shell">
+      <div class="weapon-container">
+        <div id="weapon_name" class="name-container">Weapon Name</div>
+        <div class="details-container">
+          <div class="main-img">
+            <div id="weapon_img" class="main-img-container"></div>
+          </div>
+          <div class="info-container">
+            <div class="stats-container">
+              <div class="stat">
+                <div class="stat-label-container">
+                  <div id="stat_name_1" class="stat-label">Stat 1</div>
+                </div>
+                <div class="stat-bar">
+                  <div id="stat_val_1" class="stat-value"></div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-label-container">
+                  <div id="stat_name_2" class="stat-label">Stat 2</div>
+                </div>
+                <div class="stat-bar">
+                  <div id="stat_val_2" class="stat-value"></div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-label-container">
+                  <div id="stat_name_3" class="stat-label">Stat 3</div>
+                </div>
+                <div class="stat-bar">
+                  <div id="stat_val_3" class="stat-value"></div>
+                </div>
+              </div>
+            </div>
+            <div class="sub-container">
+              <div class="sub-img">
+                <div id="sub_img" class="img-container"></div>
+              </div>
+              <div id="sub_name" class="sub-name">Sub Weapon</div>
+            </div>
+            <div class="special-container">
+              <div class="special-img">
+                <div id="special_img" class="img-container"></div>
+              </div>
+              <div id="special_name" class="special-name">Special Weapon</div>
+            </div>
+          </div>
         </div>
-        <div class="info-container">
-          <div class="stats-container">
-            <div class="stat">
-              <div class="stat-label-container">
-                <div id="stat_name_1" class="stat-label">Stat 1</div>
-              </div>
-              <div class="stat-bar">
-                <div id="stat_val_1" class="stat-value"></div>
-              </div>
-            </div>
-            <div class="stat">
-              <div class="stat-label-container">
-                <div id="stat_name_2" class="stat-label">Stat 2</div>
-              </div>
-              <div class="stat-bar">
-                <div id="stat_val_2" class="stat-value"></div>
-              </div>
-            </div>
-            <div class="stat">
-              <div class="stat-label-container">
-                <div id="stat_name_3" class="stat-label">Stat 3</div>
-              </div>
-              <div class="stat-bar">
-                <div id="stat_val_3" class="stat-value"></div>
-              </div>
-            </div>
-          </div>
-          <div class="sub-container">
-            <div class="sub-img">
-              <div id="sub_img" class="img-container"></div>
-            </div>
-            <div id="sub_name" class="sub-name">Sub Weapon</div>
-          </div>
-          <div class="special-container">
-            <div class="special-img">
-              <div id="special_img" class="img-container"></div>
-            </div>
-            <div id="special_name" class="special-name">Special Weapon</div>
-          </div>
+        <div class="points-container">
+          <div class="points-label">Points for Special</div>
+          <div id="special_points" class="points-value">100p</div>
         </div>
       </div>
-      <div class="points-container">
-        <div class="points-label">Points for Special</div>
-        <div id="special_points" class="points-value">100p</div>
+      <div class="button-container">
+        <button id="randomise_btn" class="randomise" disabled>Randomise</button>
       </div>
     </div>
-    <div class="button-container">
-      <button id="randomise_btn" class="randomise" disabled>Randomise</button>
-    </div>
-  </div>
 
-  <!-- SIDE NAV MENU -->
-  <div id="side_menu" class="side_menu">
-    <div id="side_menu_nav" class="side_menu_nav">
-      <button id="weapon_select_btn" class="">></button>
-    </div>
-    <div id="side_menu_content" class="side_menu_content">
-      <div class="side_menu_header">
-        <div class="side_menu_title">Random Weapon Select</div>
-        <button id="side_menu_close" class="side_menu_close">X</button>
+    <!-- SIDE NAV MENU -->
+    <div id="side_menu" class="side_menu">
+      <div id="side_menu_nav" class="side_menu_nav">
+        <button id="weapon_select_btn" class="">></button>
       </div>
-      <div class="side_menu_body">
-        <div id="weapon_select_container" class="weapon_select_container">
-          <div class="weapon_card_container">
-            <div class="weapon_card_shell">
-              <div class="weapon_card weapon_card_class" data-selected="true" data-class="all">
-                ALL ON
+      <div id="side_menu_content" class="side_menu_content">
+        <div class="side_menu_header">
+          <div class="side_menu_title">Random Weapon Select</div>
+          <button id="side_menu_close" class="side_menu_close">X</button>
+        </div>
+        <div class="side_menu_body">
+          <div id="weapon_select_container" class="weapon_select_container">
+            <div class="weapon_card_container">
+              <div class="weapon_card_shell">
+                <div
+                  class="weapon_card weapon_card_class"
+                  data-selected="true"
+                  data-class="weapons"
+                >
+                  <img width="50" height="50" alt="All Weapons" src="src/img/png/class/All.png" class="weapon_card_img">
+                  <div class="weapon_card_name">
+                    ALL<br>WEAPONS<br>ON
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- LOADING SCREEN -->
-  <div id="loading_screen" class="loading-screen">
-    <div class="loading-shell">
-      <div class="loading-container">
-        <div class="loading-text">Loading ...</div>
-        <div id="loading_value" class="loading-value">0%</div>
+    <!-- LOADING SCREEN -->
+    <div id="loading_screen" class="loading-screen">
+      <div class="loading-shell">
+        <div class="loading-container">
+          <div class="loading-text">Loading ...</div>
+          <div id="loading_value" class="loading-value">0%</div>
+        </div>
+        <div class="loading-bar">
+          <div id="loading_bar" class="loading-progress"></div>
+        </div>
       </div>
-      <div class="loading-bar">
-        <div id="loading_bar" class="loading-progress"></div>
-      </div>
-    </div>
-  </div>
-</body>
+  </body>
 </html>

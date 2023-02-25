@@ -1,46 +1,57 @@
 {
   "shooters": {
     "name": "Shooters",
-    "stat_name": ["Range", "Damage", "Fire Rate"]
+    "stat_name": ["Range", "Damage", "Fire Rate"],
+    "img": "Shooter"
   },
   "rollers": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Ink Speed", "Handling"]
+    "name": "Rollers",
+    "stat_name": ["Range", "Ink Speed", "Handling"],
+    "img": "Roller"
   },
   "chargers": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Charge Speed", "Mobility"]
+    "name": "Chargers",
+    "stat_name": ["Range", "Charge Speed", "Mobility"],
+    "img": "Charger"
   },
   "sloshers": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Damage", "Handling"]
+    "name": "Sloshers",
+    "stat_name": ["Range", "Damage", "Handling"],
+    "img": "Slosher"
   },
   "splatlings": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Charge Speed", "Mobility"]
+    "name": "Splatlings",
+    "stat_name": ["Range", "Charge Speed", "Mobility"],
+    "img": "Splatling"
   },
   "blasters": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Impact", "Fire Rate"]
+    "name": "Blasters",
+    "stat_name": ["Range", "Impact", "Fire Rate"],
+    "img": "Blaster"
   },
   "brushes": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Ink Speed", "Handling"]
+    "name": "Brushes",
+    "stat_name": ["Range", "Ink Speed", "Handling"],
+    "img": "Brush"
   },
   "dualies": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Damage", "Mobility"]
+    "name": "Dualies",
+    "stat_name": ["Range", "Damage", "Mobility"],
+    "img": "Dualie"
   },
   "brellas": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Damage", "Durability"]
+    "name": "Brellas",
+    "stat_name": ["Range", "Damage", "Durability"],
+    "img": "Brella"
   },
   "stringers": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Charge Speed", "Mobility"]
+    "name": "Stringers",
+    "stat_name": ["Range", "Charge Speed", "Mobility"],
+    "img": "Stringer"
   },
   "splatanas": {
-    "name": "Shooters",
-    "stat_name": ["Range", "Damage", "Handling"]
+    "name": "Splatanas",
+    "stat_name": ["Range", "Damage", "Handling"],
+    "img": "Splatana"
   }
 }
