@@ -1,25 +1,13 @@
-@font-face {
-    font-family: 'Splatoon1'; 
-    /* src: url('../fonts/otf/Splatoon1.otf'); */
-    src: url('../fonts/woff2/Splatoon1.woff2') format('woff2'), 
-    url('../fonts/woff/Splatoon1.woff') format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Splatoon2'; 
-    /* src: url('../fonts/otf/Splatoon2.otf'); */
-    src: url('../fonts/woff2/Splatoon2.woff2') format('woff2'), 
-    url('../fonts/woff/Splatoon2.woff') format('woff');
-    font-display: swap;
-}
-
 body {
     font-family: Splatoon2, Arial, Helvetica, sans-serif;
     background-color: #2A2F35;
     color: #FFFFFF;
     margin: 0;
     font-size: 24px;
+}
+
+img {
+    display: block;
 }
 
 

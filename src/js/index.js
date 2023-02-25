@@ -194,7 +194,6 @@ window.addEventListener("load", (event) => {
         let shell = document.createElement("div");
         let card = document.createElement("div");
         let name = document.createElement("div");
-        let name_text = document.createTextNode('ALL '+class_name.toUpperCase() + ' ON');
 
         card_container.classList.add("weapon_card_container");
         card_container.dataset.class = class_id;
@@ -206,8 +205,8 @@ window.addEventListener("load", (event) => {
         card.dataset.class = class_id;
         class_img_obj.classList.add("weapon_card_img");
         name.classList.add("weapon_card_name");
+        name.innerHTML = 'ALL<br>'+class_name.toUpperCase() + '<br>ON'
 
-        name.appendChild(name_text);
         card.appendChild(class_img_obj);
         card.appendChild(name);
         shell.appendChild(card);
@@ -221,7 +220,6 @@ window.addEventListener("load", (event) => {
         let card = document.createElement("div");
         let img = new Image(50, 50);
         let name = document.createElement("div");
-        let name_text = document.createTextNode(weapon_name);
 
         shell.classList.add("weapon_card_shell");
         card.classList.add("weapon_card");
@@ -233,7 +231,7 @@ window.addEventListener("load", (event) => {
         img.classList.add("weapon_card_img");
         name.classList.add("weapon_card_name");
 
-        name.appendChild(name_text);
+        name.innerHTML = weapon_name;
         card.appendChild(img);
         card.appendChild(name);
         shell.appendChild(card);
