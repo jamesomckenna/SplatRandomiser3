@@ -14,33 +14,6 @@ img {
 }
 
 
-/********** TEMPLATE IMAGE **********/
-.template {
-    width: 100%;
-    position: absolute;
-    opacity: 0.4; 
-    z-index: -10;
-}
-
-.template-container {
-    margin: auto;
-    max-width: 768px;
-    width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .template-container {
-        max-width: 100%;
-    }
-}
-
-.template-container>img {
-    width: 100%;
-    height: auto;
-}
-
-
-
 /********** WEAPON RANDOMISER **********/
 .shell {
     position: absolute;
@@ -167,17 +140,34 @@ img {
     border-radius: 2px;
 }
 
+.sub-container::before,.special-container::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    height: 94%;
+    background-color: #282828;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: -1;
+}
+
 .sub-container,.special-container {
     display: flex;
     margin: 1.2% 6.4% 2% 2.6%;
     height: 27.1%;
-}
+    position: relative;
+} 
+
+
 
 .sub-img,.special-img {
     display: block;
     width: 19.5%;
     background-color: #161616;
     border-radius: 25px;
+    border-radius: 30%;
 }
 
 .sub-img>.img-container {
@@ -208,7 +198,11 @@ img {
     font-size: 39px;
     letter-spacing: -0.7px;
     word-spacing: 4px;
-    margin-top: 4.4%;
+    margin: 4.4% 4% 0 4%;
+    padding: 2% 0;
+    line-height: 1;
+    background-color: #282828;
+    border-radius: 5px;
 }
 @media only screen and (max-width: 768px) {
     .points-container {
@@ -221,16 +215,14 @@ img {
 .points-label {
     display: block;
     width: 50%;
-    padding-left: 56px;
-    padding-left: 7.3%;
+    padding-left: 3.7%;
 }
 
 .points-value {
     display: block;
     width: 50%;
     text-align: right;
-    padding-right: 88px;
-    padding-right: 11.1%;
+    padding-right: 8.2%;
 }
 
 .button-container {

@@ -254,7 +254,6 @@ window.addEventListener("load", (event) => {
 
         if (selected_weapon_list.length > 0) {
             let i = Math.floor(Math.random() * selected_weapon_list.length);
-            // i = 24;
             let weapon_obj = weapon_list[selected_weapon_list[i]];
             weapon_name.innerHTML = weapon_obj.name;
             if (weapon_img.firstElementChild) {
