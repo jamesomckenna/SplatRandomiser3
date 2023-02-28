@@ -157,7 +157,7 @@ window.addEventListener("load", (event) => {
                     if(class_group == 'weapons'){
                         for (let j = 0; j < weapon_card_class_list.length; j++) {
                             weapon_card_class_list[j].dataset.selected = selected;
-                            weapon_card_class_list[j].children[1].innerHTML = 'ALL <br>'+ this.dataset.class.toUpperCase() +'<br>' + toggle;
+                            weapon_card_class_list[j].children[1].innerHTML = 'ALL <br>'+ weapon_card_class_list[j].dataset.class.toUpperCase() +'<br>' + toggle;
                         }
                     }
                 });
@@ -254,6 +254,7 @@ window.addEventListener("load", (event) => {
 
         if (selected_weapon_list.length > 0) {
             let i = Math.floor(Math.random() * selected_weapon_list.length);
+            // i = 24;
             let weapon_obj = weapon_list[selected_weapon_list[i]];
             weapon_name.innerHTML = weapon_obj.name;
             if (weapon_img.firstElementChild) {

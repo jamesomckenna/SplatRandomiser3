@@ -18,13 +18,22 @@
     "points": 190
   },
   {
+    "name": ".92 Gal Deco",
+    "sub": "splash_wall",
+    "special": "kraken_royale",
+    "class": "shooters",
+    "img": "96_Gal",
+    "stats": [74, 80, 10],
+    "points": 190
+  },
+  {
     "name": "Aerospray MG",
     "sub": "fizzy_bomb",
     "special": "reefslider",
     "class": "shooters",
     "img": "Aerospray_MG",
     "stats": [35, 10, 90],
-    "points": 190
+    "points": 180
   },
   {
     "name": "Aerospray RG",
@@ -54,9 +63,27 @@
     "points": 190
   },
   {
+    "name": "Custom Jet Squelcher",
+    "sub": "toxic_mist",
+    "special": "ink_storm",
+    "class": "shooters",
+    "img": "Jet_Squelcher",
+    "stats": [82, 35, 30],
+    "points": 180
+  },
+  {
     "name": "L-3 Nozzlenose",
     "sub": "curling_bomb",
     "special": "crab_tank",
+    "class": "shooters",
+    "img": "L-3_Nozzlenose",
+    "stats": [62, 25, 65],
+    "points": 200
+  },
+  {
+    "name": "L-3 Nozzlenose D",
+    "sub": "burst_bomb",
+    "special": "ultra_stamp",
     "class": "shooters",
     "img": "L-3_Nozzlenose",
     "stats": [62, 25, 65],
@@ -69,12 +96,30 @@
     "class": "shooters",
     "img": "N-ZAP_'85",
     "stats": [50, 22, 75],
-    "points": 190
+    "points": 180
+  },
+  {
+    "name": "N-ZAP '89",
+    "sub": "autobomb",
+    "special": "super_chump",
+    "class": "shooters",
+    "img": "N-ZAP_'85",
+    "stats": [50, 22, 75],
+    "points": 180
   },
   {
     "name": "Splash-o-matic",
     "sub": "burst_bomb",
     "special": "crab_tank",
+    "class": "shooters",
+    "img": "Splash-o-matic",
+    "stats": [42, 28, 75],
+    "points": 200
+  },
+  {
+    "name": "Neo Splash-o-matic",
+    "sub": "suction_bomb",
+    "special": "triple_inkstrike",
     "class": "shooters",
     "img": "Splash-o-matic",
     "stats": [42, 28, 75],
@@ -162,6 +207,15 @@
     "points": 180
   },
   {
+    "name": "Neo Sploosh-o-matic",
+    "sub": "squid_beakon",
+    "special": "killer_wail_5.1",
+    "class": "shooters",
+    "img": "Sploosh-o-matic",
+    "stats": [12, 52, 75],
+    "points": 180
+  },
+  {
     "name": "Squeezer",
     "sub": "splash_wall",
     "special": "trizooka",
@@ -219,6 +273,15 @@
     "name": "Splat Roller",
     "sub": "curling_bomb",
     "special": "big_bubbler",
+    "class": "rollers",
+    "img": "Splat_Roller",
+    "stats": [48, 45, 55],
+    "points": 180
+  },
+  {
+    "name": "Krak-On Splat Roller",
+    "sub": "squid_beakon",
+    "special": "kraken_royale",
     "class": "rollers",
     "img": "Splat_Roller",
     "stats": [48, 45, 55],
@@ -288,12 +351,30 @@
     "points": 200
   },
   {
+    "name": "Z+F Splat Charger",
+    "sub": "splash_wall",
+    "special": "triple_inkstrike",
+    "class": "chargers",
+    "img": "Splat_Charger",
+    "stats": [35, 50, 65],
+    "points": 200
+  },
+  {
     "name": "Splatterscope",
     "sub": "splat_bomb",
     "special": "ink_vac",
     "class": "chargers",
     "img": "Splatterscope",
     "stats": [91, 50, 30],
+    "points": 200
+  },
+  {
+    "name": "Z+F Splatterscope",
+    "sub": "splash_wall",
+    "special": "triple_inkstrike",
+    "class": "chargers",
+    "img": "Splatterscope",
+    "stats": [35, 50, 65],
     "points": 200
   },
   {
@@ -351,13 +432,22 @@
     "points": 180
   },
   {
+    "name": "Tri-Slosher Nouveau",
+    "sub": "fizzy_bomb",
+    "special": "tacticooler",
+    "class": "sloshers",
+    "img": "Tri-Slosher",
+    "stats": [31, 75, 70],
+    "points": 180
+  },
+  {
     "name": "Ballpoint Splatling",
     "sub": "fizzy_bomb",
     "special": "inkjet",
     "class": "splatlings",
     "img": "Ballpoint_Splatling",
     "stats": [84, 18, 60],
-    "points": 200
+    "points": 190
   },
   {
     "name": "Heavy Splatling",
@@ -504,6 +594,15 @@
     "points": 180
   },
   {
+    "name": "Clash Blaster Neo",
+    "sub": "curling_bomb",
+    "special": "super_chump",
+    "class": "blasters",
+    "img": "Clash_Blaster",
+    "stats": [21, 30, 65],
+    "points": 180
+  },
+  {
     "name": "Luna Blaster",
     "sub": "splat_bomb",
     "special": "zipcaster",
@@ -534,6 +633,15 @@
     "name": "Rapid Blaster",
     "sub": "ink_mine",
     "special": "triple_inkstrike",
+    "class": "blasters",
+    "img": "Rapid_Blaster",
+    "stats": [62, 35, 40],
+    "points": 200
+  },
+  {
+    "name": "Rapid Blaster Deco",
+    "sub": "torpedo",
+    "special": "inkjet",
     "class": "blasters",
     "img": "Rapid_Blaster",
     "stats": [62, 35, 40],
@@ -591,7 +699,7 @@
     "class": "stringers",
     "img": "Tri-Stringer",
     "stats": [88, 40, 40],
-    "points": 200
+    "points": 190
   },
   {
     "name": "Splatana Stamper",

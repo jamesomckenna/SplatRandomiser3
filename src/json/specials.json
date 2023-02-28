@@ -62,5 +62,13 @@
   "zipcaster": {
     "name": "Zipcaster",
     "img": "Zipcaster"
+  },  
+  "kraken_royale": {
+    "name": "Kraken Royale",
+    "img": "Splashdown"
+  },
+  "super_chump": {
+    "name": "Super Chump",
+    "img": "Splashdown"
   }
 }
