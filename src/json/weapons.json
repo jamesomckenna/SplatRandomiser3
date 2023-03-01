@@ -22,7 +22,7 @@
     "sub": "splash_wall",
     "special": "kraken_royale",
     "class": "shooters",
-    "img": "96_Gal",
+    "img": "96_Gal_Deco",
     "stats": [74, 80, 10],
     "points": 190
   },
@@ -67,7 +67,7 @@
     "sub": "toxic_mist",
     "special": "ink_storm",
     "class": "shooters",
-    "img": "Jet_Squelcher",
+    "img": "Custom_Jet_Squelcher",
     "stats": [82, 35, 30],
     "points": 180
   },
@@ -85,7 +85,7 @@
     "sub": "burst_bomb",
     "special": "ultra_stamp",
     "class": "shooters",
-    "img": "L-3_Nozzlenose",
+    "img": "L-3_Nozzlenose_D",
     "stats": [62, 25, 65],
     "points": 200
   },
@@ -103,7 +103,7 @@
     "sub": "autobomb",
     "special": "super_chump",
     "class": "shooters",
-    "img": "N-ZAP_'85",
+    "img": "N-ZAP_'89",
     "stats": [50, 22, 75],
     "points": 180
   },
@@ -121,7 +121,7 @@
     "sub": "suction_bomb",
     "special": "triple_inkstrike",
     "class": "shooters",
-    "img": "Splash-o-matic",
+    "img": "Neo_Splash-o-matic",
     "stats": [42, 28, 75],
     "points": 200
   },
@@ -211,7 +211,7 @@
     "sub": "squid_beakon",
     "special": "killer_wail_5.1",
     "class": "shooters",
-    "img": "Sploosh-o-matic",
+    "img": "Neo_Sploosh-o-matic",
     "stats": [12, 52, 75],
     "points": 180
   },
@@ -283,7 +283,7 @@
     "sub": "squid_beakon",
     "special": "kraken_royale",
     "class": "rollers",
-    "img": "Splat_Roller",
+    "img": "Krak-On_Splat_Roller",
     "stats": [48, 45, 55],
     "points": 180
   },
@@ -355,7 +355,7 @@
     "sub": "splash_wall",
     "special": "triple_inkstrike",
     "class": "chargers",
-    "img": "Splat_Charger",
+    "img": "Z+F_Splat_Charger",
     "stats": [35, 50, 65],
     "points": 200
   },
@@ -373,7 +373,7 @@
     "sub": "splash_wall",
     "special": "triple_inkstrike",
     "class": "chargers",
-    "img": "Splatterscope",
+    "img": "Z+F_Splatterscope",
     "stats": [35, 50, 65],
     "points": 200
   },
@@ -436,7 +436,7 @@
     "sub": "fizzy_bomb",
     "special": "tacticooler",
     "class": "sloshers",
-    "img": "Tri-Slosher",
+    "img": "Tri-Slosher_Nouveau",
     "stats": [31, 75, 70],
     "points": 180
   },
@@ -598,7 +598,7 @@
     "sub": "curling_bomb",
     "special": "super_chump",
     "class": "blasters",
-    "img": "Clash_Blaster",
+    "img": "Clash_Blaster_Neo",
     "stats": [21, 30, 65],
     "points": 180
   },
@@ -643,7 +643,7 @@
     "sub": "torpedo",
     "special": "inkjet",
     "class": "blasters",
-    "img": "Rapid_Blaster",
+    "img": "Rapid_Blaster_Deco",
     "stats": [62, 35, 40],
     "points": 200
   },

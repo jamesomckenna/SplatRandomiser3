@@ -65,10 +65,10 @@
   },  
   "kraken_royale": {
     "name": "Kraken Royale",
-    "img": "Splashdown"
+    "img": "Kraken_Royale"
   },
   "super_chump": {
     "name": "Super Chump",
-    "img": "Splashdown"
+    "img": "Super_Chump"
   }
 }

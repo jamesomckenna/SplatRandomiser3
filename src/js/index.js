@@ -218,7 +218,7 @@ window.addEventListener("load", (event) => {
     function add_weapon_checkbox(weapon_index, weapon_name, weapon_img_url, card_container) {
         let shell = document.createElement("div");
         let card = document.createElement("div");
-        let img = new Image(50, 50);
+        let img = new Image(90, 90);
         let name = document.createElement("div");
 
         shell.classList.add("weapon_card_shell");
