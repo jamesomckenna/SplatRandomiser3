@@ -54,6 +54,15 @@
     "points": 190
   },
   {
+    "name": "H-3 Nozzlenose D",
+    "sub": "splash_wall",
+    "special": "big_bubbler",
+    "class": "shooters",
+    "img": "H-3_Nozzlenose_D",
+    "stats": [70, 58, 30],
+    "points": 190
+  },
+  {
     "name": "Jet Squelcher",
     "sub": "angle_shooter",
     "special": "ink_vac",
@@ -198,6 +207,15 @@
     "points": 190
   },
   {
+    "name": "Annaki Splattershot Nova",
+    "sub": "ink_mine",
+    "special": "inkjet",
+    "class": "shooters",
+    "img": "Annaki_Splattershot_Nova",
+    "stats": [68, 20, 60],
+    "points": 190
+  },
+  {
     "name": "Sploosh-o-matic",
     "sub": "curling_bomb",
     "special": "ultra_stamp",
@@ -230,6 +248,15 @@
     "special": "ink_vac",
     "class": "rollers",
     "img": "Big_Swig_Roller",
+    "stats": [56, 54, 60],
+    "points": 200
+  },
+  {
+    "name": "Big Swig Roller Express",
+    "sub": "angle_shooter",
+    "special": "ink_storm",
+    "class": "rollers",
+    "img": "Big_Swig_Roller_Express",
     "stats": [56, 54, 60],
     "points": 200
   },
@@ -459,6 +486,15 @@
     "points": 200
   },
   {
+    "name": "Heavy Splatling Deco",
+    "sub": "point_sensor",
+    "special": "kraken_royale",
+    "class": "splatlings",
+    "img": "Heavy_Splatling_Deco",
+    "stats": [78, 38, 55],
+    "points": 200
+  },
+  {
     "name": "Hydra Splatling",
     "sub": "autobomb",
     "special": "booyah_bomb",
@@ -522,11 +558,29 @@
     "points": 200
   },
   {
+    "name": "Light Tetra Dualies",
+    "sub": "sprinkler",
+    "special": "trizooka",
+    "class": "dualies",
+    "img": "Dark_Tetra_Dualies",
+    "stats": [58, 22, 90],
+    "points": 200
+  },
+  {
     "name": "Dualie Squelchers",
     "sub": "splat_bomb",
     "special": "wave_breaker",
     "class": "dualies",
     "img": "Dualie_Squelchers",
+    "stats": [70, 28, 70],
+    "points": 200
+  },
+  {
+    "name": "Custom Dualie Squelchers",
+    "sub": "squid_beakon",
+    "special": "super_chump",
+    "class": "dualies",
+    "img": "Custom_Dualie_Squelchers",
     "stats": [70, 28, 70],
     "points": 200
   },
@@ -657,6 +711,24 @@
     "points": 180
   },
   {
+    "name": "Rapid Blaster Pro Deco",
+    "sub": "angle_shooter",
+    "special": "killer_wail_5.1",
+    "class": "blasters",
+    "img": "Rapid_Blaster_Pro_Deco",
+    "stats": [72, 35, 30],
+    "points": 180
+  },
+  {
+    "name": "S-BLAST '92",
+    "sub": "sprinkler",
+    "special": "reefslider",
+    "class": "blasters",
+    "img": "S-BLAST_'92",
+    "stats": [27, 70, 20],
+    "points": 180
+  },
+  {
     "name": "Inkbrush",
     "sub": "splat_bomb",
     "special": "killer_wail_5.1",
@@ -682,6 +754,15 @@
     "img": "Octobrush",
     "stats": [23, 80, 85],
     "points": 200
+  },
+  {
+    "name": "Painbrush",
+    "sub": "curling_bomb",
+    "special": "wave_breaker",
+    "class": "brushes",
+    "img": "Painbrush",
+    "stats": [5, 100, 100],
+    "points": 180
   },
   {
     "name": "REEF-LUX 450",
@@ -716,6 +797,15 @@
     "special": "ultra_stamp",
     "class": "splatanas",
     "img": "Splatana_Wiper",
+    "stats": [58, 29, 75],
+    "points": 190
+  },
+  {
+    "name": "Splatana Wiper Deco",
+    "sub": "squid_beakon",
+    "special": "tenta_missiles",
+    "class": "splatanas",
+    "img": "Splatana_Wiper_Deco",
     "stats": [58, 29, 75],
     "points": 190
   }
