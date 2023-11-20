@@ -5,6 +5,6 @@ This project is an updated version of jamesomckenna's old SplatRandomiser That t
 New features include preloading images, better optimised files for improved load times, more mobile friendly UI."
 -jamesomckenna  
 
-I hope that he accepts the pull request. But it will be here either way.
+Go to https://spamwizard.github.io/SplatRandomiser3/ to run it.
 
 -SpamWizard
