@@ -62,14 +62,14 @@ window.addEventListener("load", (event) => {
             img_promises.push(class_list[key].img_obj.decode()
                 .then(() => {
                     update_load_screen();
-                }));
+                })); 
         }
  
         weapon_list.sort(sort_weapons_alphabetically);
-        weapon_list.forEach((element, index) => {
-            let img_src = 'dist/images/weapons/' + element.img + '.webp';
+        weapon_list.forEach((weapon, index) => {
+            let img_src = 'dist/images/weapons/' + weapon.img + '.webp';
             weapon_list[index].img_obj = new Image(205, 205);
-            weapon_list[index].img_obj.alt = element.name;
+            weapon_list[index].img_obj.alt = weapon.name;
             weapon_list[index].img_obj.src = img_src;
 
             img_promises.push(weapon_list[index].img_obj.decode()
@@ -110,7 +110,7 @@ window.addEventListener("load", (event) => {
 
             //add weapon checkbox
             weapon_list.forEach((element, index) => {
-                add_weapon_checkbox(index, element.name, weapon_list[index].img_obj.src, class_list[weapon_list[index].class].container);
+                add_weapon_checkbox(index, element.name, class_list[weapon_list[index].class].container);
             });
 
             // init toggle functions for cards
@@ -206,7 +206,7 @@ window.addEventListener("load", (event) => {
         return card_container;
     }
 
-    function add_weapon_checkbox(weapon_index, weapon_name, weapon_img_url, card_container) {
+    function add_weapon_checkbox(weapon_index, weapon_name, card_container) {
         let shell = document.createElement("div");
         let card = document.createElement("div");
         let img = new Image(90, 90);
@@ -218,7 +218,7 @@ window.addEventListener("load", (event) => {
         card.dataset.selected = 'true';
         card.dataset.id = weapon_index;
         img.alt = weapon_name;
-        img.src = weapon_img_url;
+        img.src = 'dist/images/weapons/' + weapon_list[weapon_index].img + '-small.webp';
         img.classList.add("weapon_card_img");
         name.classList.add("weapon_card_name");
 

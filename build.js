@@ -43,36 +43,19 @@ function minifyJSON(inputPath, outputPath) {
 }
 
 // Function to optimize images and save as WebP
-async function optimizeImage(inputPath, outputPath) {
-    await sharp(inputPath)
-        .toFormat("webp", { quality: 80 }) // Convert to WebP with 80% quality
-        .toFile(outputPath);
-    console.log(`Optimized Image: ${inputPath} → ${outputPath}`);
-}
-
-// Function to copy remaining files excluding processed directories
-function copyRemainingFilesExcluding(inputDir, outputDir, excludedDirs) {
-    const files = getFilesFromDir(inputDir, []); // Get all files, no specific extensions
-
-    files.forEach((file) => {
-        const relativePath = path.relative(inputDir, file);
-        const subDir = relativePath.split(path.sep)[0];
-
-        // Skip files in excluded directories
-        if (excludedDirs.includes(subDir)) return;
-
-        const outputPath = path.join(outputDir, relativePath);
-
-        // Ensure the subdirectory exists
-        const outputFileDir = path.dirname(outputPath);
-        if (!fs.existsSync(outputFileDir)) {
-            fs.mkdirSync(outputFileDir, { recursive: true });
+async function optimizeImage(inputPath, outputPath, imageSizes = [{}]) {
+    await imageSizes.forEach((imageSize) => {
+        let outputPathCustom = outputPath;
+        if (imageSize.hasOwnProperty("suffix")) {
+            const fileName = path.basename(outputPath, path.extname(outputPath));
+            outputPathCustom = outputPathCustom.replace(fileName, fileName + imageSize.suffix);
         }
-
-        // Copy the file
-        fs.copyFileSync(file, outputPath);
-        console.log(`Copied: ${file} → ${outputPath}`);
-    });
+        sharp(inputPath)
+            .resize(imageSize)
+            .toFormat("webp", { quality: 80 }) // Convert to WebP with 80% quality
+            .toFile(outputPathCustom);
+        console.log(`Optimized Image: ${inputPath} → ${outputPathCustom}`);
+    })
 }
 
 
@@ -136,11 +119,66 @@ function build() {
             fs.mkdirSync(outputDir, { recursive: true });
         }
 
+        const imageDir = path.dirname(relativePath);
+
+        const imageSizes = {
+            class: [
+                {
+                    width: 90
+                }
+            ],
+            special: [
+                {
+                    width: 71
+                }
+            ],
+            sub: [
+                {
+                    width: 71
+                }
+            ],
+            weapons: [
+                {
+                    suffix: "-small",
+                    width: 90
+                },
+                {
+                    width: 205
+                }
+            ],
+        };
+
+        let imageSize = [{}];
+        if (imageSizes.hasOwnProperty(imageDir)) {
+            imageSize = imageSizes[imageDir];
+        }
+
         // Optimize and save the image
-        optimizeImage(file, outputPath);
+        optimizeImage(file, outputPath, imageSize);
     });
 
-    copyRemainingFilesExcluding(inputDirs.root, outputDirs.root, Object.keys(inputDirs));
+    const files = getFilesFromDir(inputDirs.root, []); // Get all files, no specific extensions
+    files.forEach((file) => {
+        const excludedDirs = Object.keys(inputDirs)
+        const relativePath = path.relative(inputDirs.root, file);
+        const subDir = relativePath.split(path.sep)[0];
+
+        // Skip files in excluded directories
+        if (excludedDirs.includes(subDir)) return;
+
+        const outputPath = path.join(outputDirs.root, relativePath);
+
+        // Ensure the subdirectory exists
+        const outputFileDir = path.dirname(outputPath);
+        if (!fs.existsSync(outputFileDir)) {
+            fs.mkdirSync(outputFileDir, { recursive: true });
+        }
+
+        // Copy the file
+        fs.copyFileSync(file, outputPath);
+        console.log(`Copied: ${file} → ${outputPath}`);
+    });
+
     console.log("Build completed!");
 }
 
