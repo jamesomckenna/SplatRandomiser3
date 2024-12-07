@@ -70,5 +70,13 @@
   "super_chump": {
     "name": "Super Chump",
     "img": "Super_Chump"
+  },
+  "splattercolor_screen": {
+    "name": "Splattercolor Screen",
+    "img": "Splattercolor_Screen"
+  },
+  "triple_splashdown": {
+    "name": "Triple Splashdown",
+    "img": "Triple_Splashdown"
   }
 }

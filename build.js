@@ -159,7 +159,7 @@ function build() {
 
     const files = getFilesFromDir(inputDirs.root, []); // Get all files, no specific extensions
     files.forEach((file) => {
-        const excludedDirs = Object.keys(inputDirs)
+        const excludedDirs = [ 'scripts', 'styles', 'json', 'images' ];
         const relativePath = path.relative(inputDirs.root, file);
         const subDir = relativePath.split(path.sep)[0];
 
