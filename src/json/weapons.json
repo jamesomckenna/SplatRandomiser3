@@ -1276,5 +1276,14 @@
     "img": "Recycled_Brella_24_Mk_II",
     "stats": [56, 75, 8],
     "points": 200
+  },
+  {
+    "name": "Tenta Sorella Brella",
+    "sub": "ink_mine",
+    "special": "trizooka",
+    "class": "brellas",
+    "img": "Tenta_Sorella_Brella",
+    "stats": [62, 85, 85],
+    "points": 190
   }
 ]
