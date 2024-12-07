@@ -7,4 +7,10 @@ New features include preloading images, better optimised files for improved load
 
 To run the web app, simply open your preferred web browser and enter this address: https://jamesomckenna.github.io/SplatRandomiser3/
 
+To install the app and run it locallly:
+- Ensure Node.js v22 or later is installed
+- In a terminal, run `npm i` to install dependancies
+- Then run `npm run build` to compile all the code
+- Open the index.html file on your local server
+
 As always, enjoy!
