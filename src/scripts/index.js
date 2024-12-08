@@ -1,31 +1,31 @@
 window.addEventListener("load", (event) => {
     console.log("Page Loaded");
 
-    let main_shell = document.getElementById('main_shell');
-    let randomise_btn = document.getElementById('randomise_btn');
-    let weapon_name = document.getElementById('weapon_name');
-    let weapon_img = document.getElementById('weapon_img');
-    let sub_name = document.getElementById('sub_name');
-    let sub_img = document.getElementById('sub_img');
-    let special_name = document.getElementById('special_name');
-    let special_img = document.getElementById('special_img');
-    let special_points = document.getElementById('special_points');
-    let stat_name_1 = document.getElementById('stat_name_1');
-    let stat_name_2 = document.getElementById('stat_name_2');
-    let stat_name_3 = document.getElementById('stat_name_3');
-    let stat_val_1 = document.getElementById('stat_val_1');
-    let stat_val_2 = document.getElementById('stat_val_2');
-    let stat_val_3 = document.getElementById('stat_val_3');
+    let main_shell = document.getElementById("main_shell");
+    let randomise_btn = document.getElementById("randomise_btn");
+    let weapon_name = document.getElementById("weapon_name");
+    let weapon_img = document.getElementById("weapon_img");
+    let sub_name = document.getElementById("sub_name");
+    let sub_img = document.getElementById("sub_img");
+    let special_name = document.getElementById("special_name");
+    let special_img = document.getElementById("special_img");
+    let special_points = document.getElementById("special_points");
+    let stat_name_1 = document.getElementById("stat_name_1");
+    let stat_name_2 = document.getElementById("stat_name_2");
+    let stat_name_3 = document.getElementById("stat_name_3");
+    let stat_val_1 = document.getElementById("stat_val_1");
+    let stat_val_2 = document.getElementById("stat_val_2");
+    let stat_val_3 = document.getElementById("stat_val_3");
 
-    let loading_screen = document.getElementById('loading_screen');
-    let loading_bar = document.getElementById('loading_bar');
-    let loading_value = document.getElementById('loading_value');
+    let loading_screen = document.getElementById("loading_screen");
+    let loading_bar = document.getElementById("loading_bar");
+    let loading_value = document.getElementById("loading_value");
 
-    let side_menu = document.getElementById('side-menu');
-    let weapon_select_btn = document.getElementById('weapon_select_btn');
-    let side_menu_close = document.getElementById('side-menu__close');
-    let side_menu_background = document.getElementById('side-menu__background');
-    let weapon_select_container = document.getElementById('weapon_select_container');
+    let side_menu = document.getElementById("side-menu");
+    let weapon_select_btn = document.getElementById("weapon_select_btn");
+    let side_menu_close = document.getElementById("side-menu__close");
+    let side_menu_background = document.getElementById("side-menu__background");
+    let weapon_select_container = document.getElementById("weapon_select_container");
     let weapon_card_list = document.getElementsByClassName("weapon_card_weapon");
     let weapon_card_class_list = document.getElementsByClassName("weapon_card_class");
 
@@ -33,24 +33,24 @@ window.addEventListener("load", (event) => {
     let data_promises = [];
     let img_promises = [];
 
-    data_promises.push(fetch('dist/json/weapons.json')
+    data_promises.push(fetch("dist/json/weapons.json")
         .then((response) => response.json())
         .then((json) => weapon_list = json));
 
-    data_promises.push(fetch('dist/json/subs.json')
+    data_promises.push(fetch("dist/json/subs.json")
         .then((response) => response.json())
         .then((json) => sub_list = json));
 
-    data_promises.push(fetch('dist/json/specials.json')
+    data_promises.push(fetch("dist/json/specials.json")
         .then((response) => response.json())
         .then((json) => special_list = json));
 
-    data_promises.push(fetch('dist/json/classes.json')
+    data_promises.push(fetch("dist/json/classes.json")
         .then((response) => response.json())
         .then((json) => class_list = json));
 
     Promise.all(data_promises).then(d => {
-        console.log('Data Loaded');
+        console.log("Data Loaded");
 
         let load_img_progress = 0;
         let load_img_total = weapon_list.length + Object.keys(sub_list).length + Object.keys(special_list).length + Object.keys(class_list).length;
@@ -58,7 +58,7 @@ window.addEventListener("load", (event) => {
         for (key in class_list) {
             class_list[key].img_obj = new Image(90, 90);
             class_list[key].img_obj.alt = class_list[key].name;
-            class_list[key].img_obj.src = 'dist/images/class/' + class_list[key].img + '.webp';
+            class_list[key].img_obj.src = "dist/images/class/" + class_list[key].img + ".webp";
 
             img_promises.push(class_list[key].img_obj.decode()
                 .then(() => {
@@ -68,7 +68,7 @@ window.addEventListener("load", (event) => {
 
         weapon_list.sort(sort_weapons_alphabetically);
         weapon_list.forEach((weapon, index) => {
-            let img_src = 'dist/images/weapons/' + weapon.img + '.webp';
+            let img_src = "dist/images/weapons/" + weapon.img + ".webp";
             weapon_list[index].img_obj = new Image(205, 205);
             weapon_list[index].img_obj.alt = weapon.name;
             weapon_list[index].img_obj.src = img_src;
@@ -82,7 +82,7 @@ window.addEventListener("load", (event) => {
         for (key in sub_list) {
             sub_list[key].img_obj = new Image(71, 71);
             sub_list[key].img_obj.alt = sub_list[key].name;
-            sub_list[key].img_obj.src = 'dist/images/sub/' + sub_list[key].img + '.webp';
+            sub_list[key].img_obj.src = "dist/images/sub/" + sub_list[key].img + ".webp";
 
             img_promises.push(sub_list[key].img_obj.decode()
                 .then(() => {
@@ -93,7 +93,7 @@ window.addEventListener("load", (event) => {
         for (key in special_list) {
             special_list[key].img_obj = new Image(71, 71);
             special_list[key].img_obj.alt = special_list[key].name;
-            special_list[key].img_obj.src = 'dist/images/special/' + special_list[key].img + '.webp';
+            special_list[key].img_obj.src = "dist/images/special/" + special_list[key].img + ".webp";
 
             img_promises.push(special_list[key].img_obj.decode()
                 .then(() => {
@@ -102,7 +102,7 @@ window.addEventListener("load", (event) => {
         }
 
         Promise.all(img_promises).then(d => {
-            console.log('Images Loaded');
+            console.log("Images Loaded");
 
             //add weapon checkbox
             for (key in class_list) {
@@ -116,40 +116,40 @@ window.addEventListener("load", (event) => {
 
             // init toggle functions for cards
             for (let i = 0; i < weapon_card_list.length; i++) {
-                weapon_card_list[i].addEventListener('click', function () {
-                    if (this.dataset.selected == 'true') {
-                        this.dataset.selected = 'false'
+                weapon_card_list[i].addEventListener("click", function () {
+                    if (this.dataset.selected == "true") {
+                        this.dataset.selected = "false"
                     } else {
-                        this.dataset.selected = 'true';
+                        this.dataset.selected = "true";
                     }
                 });
             }
 
             for (let i = 0; i < weapon_card_class_list.length; i++) {
                 weapon_card_class_list[i].addEventListener("click", function () {
-                    let toggle = '';
-                    if (this.dataset.selected == 'true') {
-                        this.dataset.selected = 'false';
-                        toggle = 'OFF'
+                    let toggle = "";
+                    if (this.dataset.selected == "true") {
+                        this.dataset.selected = "false";
+                        toggle = "OFF"
                     } else {
-                        this.dataset.selected = 'true';
-                        toggle = 'ON'
+                        this.dataset.selected = "true";
+                        toggle = "ON"
                     }
-                    this.children[1].innerHTML = 'ALL <br>' + this.dataset.class.toUpperCase() + '<br>' + toggle;
+                    this.children[1].innerHTML = "ALL <br>" + this.dataset.class.toUpperCase() + "<br>" + toggle;
 
                     let class_group = this.dataset.class;
                     let selected = this.dataset.selected;
 
                     for (let j = 0; j < weapon_card_list.length; j++) {
-                        if (weapon_list[weapon_card_list[j].dataset.id].class == class_group || class_group == 'weapons') {
+                        if (weapon_list[weapon_card_list[j].dataset.id].class == class_group || class_group == "weapons") {
                             weapon_card_list[j].dataset.selected = selected;
                         }
                     }
 
-                    if (class_group == 'weapons') {
+                    if (class_group == "weapons") {
                         for (let j = 0; j < weapon_card_class_list.length; j++) {
                             weapon_card_class_list[j].dataset.selected = selected;
-                            weapon_card_class_list[j].children[1].innerHTML = 'ALL <br>' + weapon_card_class_list[j].dataset.class.toUpperCase() + '<br>' + toggle;
+                            weapon_card_class_list[j].children[1].innerHTML = "ALL <br>" + weapon_card_class_list[j].dataset.class.toUpperCase() + "<br>" + toggle;
                         }
                     }
                 });
@@ -157,17 +157,17 @@ window.addEventListener("load", (event) => {
 
             randomise_weapon();
             randomise_btn.disabled = false;
-            loading_screen.style.display = 'none';
+            loading_screen.style.display = "none";
         });
 
         function update_load_screen() {
             load_img_progress++;
-            let progress = Math.floor((load_img_progress / load_img_total) * 100) + '%';
+            let progress = Math.floor((load_img_progress / load_img_total) * 100) + "%";
             loading_bar.style.width = progress;
             loading_value.innerHTML = progress;
         }
     }).catch(e => {
-        console.log('Error: Unable to obtain data', e);
+        console.log("Error: Unable to obtain data", e);
     });
 
 
@@ -188,14 +188,14 @@ window.addEventListener("load", (event) => {
 
         card_container.classList.add("weapon_card_container");
         card_container.dataset.class = class_id;
-        card_container.dataset.selected = 'true';
+        card_container.dataset.selected = "true";
         card.classList.add("weapon_card");
         card.classList.add("weapon_card_class");
-        card.dataset.selected = 'true';
+        card.dataset.selected = "true";
         card.dataset.class = class_id;
         class_img_obj.classList.add("weapon_card_img");
         name.classList.add("weapon_card_name");
-        name.innerHTML = 'ALL<br>' + class_name.toUpperCase() + '<br>ON'
+        name.innerHTML = "ALL<br>" + class_name.toUpperCase() + "<br>ON"
 
         card.appendChild(class_img_obj);
         card.appendChild(name);
@@ -211,10 +211,10 @@ window.addEventListener("load", (event) => {
 
         card.classList.add("weapon_card");
         card.classList.add("weapon_card_weapon");
-        card.dataset.selected = 'true';
+        card.dataset.selected = "true";
         card.dataset.id = weapon_index;
-        img.alt = weapon_name;
-        img.src = 'dist/images/weapons/' + weapon_list[weapon_index].img + '-small.webp';
+        img.alt = "";
+        img.src = "dist/images/weapons/" + weapon_list[weapon_index].img + "-small.webp";
         img.classList.add("weapon_card_img");
         img.setAttribute("loading", "lazy");
         name.classList.add("weapon_card_name");
@@ -233,7 +233,7 @@ window.addEventListener("load", (event) => {
             let id = weapon_card_list[i].dataset.id;
             let selected = weapon_card_list[i].dataset.selected;
 
-            if (selected == 'true') {
+            if (selected == "true") {
                 selected_weapon_list.push(id);
             }
         }
@@ -267,13 +267,13 @@ window.addEventListener("load", (event) => {
             stat_name_2.innerHTML = class_obj.stat_name[1];
             stat_name_3.innerHTML = class_obj.stat_name[2];
 
-            stat_val_1.style.width = weapon_obj.stats[0] + '%';
-            stat_val_2.style.width = weapon_obj.stats[1] + '%';
-            stat_val_3.style.width = weapon_obj.stats[2] + '%';
+            stat_val_1.style.width = weapon_obj.stats[0] + "%";
+            stat_val_2.style.width = weapon_obj.stats[1] + "%";
+            stat_val_3.style.width = weapon_obj.stats[2] + "%";
 
-            special_points.innerHTML = weapon_obj.points + 'p';
+            special_points.innerHTML = weapon_obj.points + "p";
         } else {
-            console.log('Error: No weapons to choose from');
+            console.log("Error: No weapons to choose from");
         }
     }
 
@@ -307,7 +307,7 @@ window.addEventListener("load", (event) => {
         close_side_menu();
     });
 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener("keydown", function (event) {
         if (event.target === modal) {
             close_side_menu();
         }
