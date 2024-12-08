@@ -1,6 +1,5 @@
 body {
     font-family: Splatoon2, Arial, Helvetica, sans-serif;
-    /* background-color: #3A3A3A; */
     background-color: #2a2f35;
     color: #ffffff;
     margin: 0;
@@ -25,7 +24,7 @@ button:focus-visible {
 }
 
 /********** WEAPON RANDOMISER **********/
-.shell {
+.randomiser {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,28 +33,27 @@ button:focus-visible {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* opacity: 0.6; */
     justify-content: center;
 }
 
-.weapon-container {
+.weapon {
     max-width: 768px;
     width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
-    .weapon-container {
+    .weapon {
         max-width: 100%;
     }
 }
 
-.name-frame {
+.weapon__heading {
     background-color: #dfaf00;
     border-radius: 30px;
     padding: 1% 4% 1% 4%;
 }
 
-.name-container {
+.weapon__name {
     font-family: Splatoon1, Arial, Helvetica, sans-serif;
     font-size: 39px;
     letter-spacing: -1px;
@@ -66,46 +64,38 @@ button:focus-visible {
 }
 
 @media only screen and (max-width: 768px) {
-    .name-container {
+    .weapon__name {
         font-size: 5.1vw;
         letter-spacing: calc(0.1vw * -1);
         word-spacing: calc(0.5vw * -1);
     }
 }
 
-.details-container {
-    display: flex;
+.weapon__details {
+    display: grid;
+    grid-template-columns: 37% 63%;
 }
 
-.main-img {
-    display: block;
-    width: 37%;
-}
-
-.main-img-container {
+.weapon__image {
     margin: 10% 8% 0 19%;
     background-color: #dddddd;
     border-radius: 30%;
+    aspect-ratio: 1;
 }
 
-.main-img-container > img {
+.weapon__image > img {
     filter: drop-shadow(0 5px 0 #888888);
 }
 
 @media only screen and (max-width: 768px) {
-    .main-img-container > img {
+    .weapon__image > img {
         margin: 0;
         width: 100%;
         height: auto;
     }
 }
 
-.info-container {
-    display: block;
-    width: 63%;
-}
-
-.stats-container {
+.weapon__stats {
     font-size: 26px;
     margin: 2.5% 6.4% 0 4.8%;
     line-height: 165%;
@@ -114,44 +104,39 @@ button:focus-visible {
 }
 
 @media only screen and (max-width: 768px) {
-    .stats-container {
+    .weapon__stats {
         font-size: 3.4vw;
     }
 }
 
 .stat {
-    display: flex;
-    margin-right: 7%;
+    padding-right: 7%;
+    grid-template-columns: 48% 52%;
+    display: grid;
 }
 
-.stat-label-container {
-    display: block;
-    width: 48%;
+.stat__label {
+    padding-right: 2%;
     text-align: right;
 }
 
-.stat-label {
-    padding-right: 2%;
-}
-
-.stat-bar {
+.stat__bar {
     display: block;
     overflow: hidden;
     background-color: #161616;
-    width: 52%;
-    margin: 2% 0;
+    margin: 4% 0;
     border-radius: 2px;
 }
 
-.stat-value {
+.stat__value {
     width: 0%;
     height: 100%;
     background-color: #dfaf00;
     border-radius: 2px;
 }
 
-.sub-container::before,
-.special-container::before {
+.sub::before,
+.special::before {
     content: "";
     position: absolute;
     right: 0;
@@ -164,33 +149,32 @@ button:focus-visible {
     z-index: -1;
 }
 
-.sub-container,
-.special-container {
+.sub,
+.special {
     display: flex;
     margin: 1.2% 6.4% 2% 2.6%;
     height: 27.1%;
     position: relative;
 }
 
-.sub-img,
-.special-img {
+.sub__img-container,
+.special__img-container {
     display: block;
     width: 19.5%;
     background-color: #161616;
-    border-radius: 25px;
     border-radius: 30%;
 }
 
-.sub-img > .img-container {
+.sub__img {
     margin: 9% 13% 0 13%;
 }
 
-.special-img > .img-container {
+.special__img {
     margin: 6% 9% 0 9%;
 }
 
-.sub-name,
-.special-name {
+.sub__name,
+.special__name {
     display: block;
     width: 80.5%;
     font-size: 34px;
@@ -200,13 +184,13 @@ button:focus-visible {
 }
 
 @media only screen and (max-width: 768px) {
-    .sub-name,
-    .special-name {
+    .sub__name,
+    .special__name {
         font-size: 4.5vw;
     }
 }
 
-.points-container {
+.weapon__points {
     display: flex;
     font-size: 39px;
     letter-spacing: -0.7px;
@@ -218,33 +202,33 @@ button:focus-visible {
     border-radius: 5px;
 }
 @media only screen and (max-width: 768px) {
-    .points-container {
+    .weapon__points {
         font-size: 5.1vw;
         letter-spacing: -0.1px;
         word-spacing: 0;
     }
 }
 
-.points-label {
+.weapon__points-label {
     display: block;
     width: 50%;
     padding-left: 3.7%;
 }
 
-.points-value {
+.weapon__points-value {
     display: block;
     width: 50%;
     text-align: right;
     padding-right: 8.2%;
 }
 
-.button-container {
+.randomiser__actions {
     padding-top: 48px;
     padding-bottom: 24px;
     text-align: center;
 }
 
-.randomise {
+.randomiser__btn {
     padding: 16px 36px;
     font-size: 24px;
     background-color: #dfaf00;
@@ -252,13 +236,13 @@ button:focus-visible {
     border-radius: 5px;
 }
 
-.randomise:hover,
-.randomise:focus-visible {
+.randomiser__btn:hover,
+.randomiser__btn:focus-visible {
     background-color: #b89000;
 }
 
 /********** LOADING PAGE **********/
-.loading-screen {
+.load-screen {
     position: absolute;
     top: 0;
     left: 0;
@@ -270,26 +254,26 @@ button:focus-visible {
     align-items: center;
 }
 
-.loading-shell {
+.load-screen__shell {
     max-width: 768px;
     width: 100%;
     margin: auto;
     padding: 0 25px;
 }
 
-.loading-container {
+.load-screen__container {
     display: flex;
     justify-content: space-between;
 }
 
-.loading-bar {
+.load-screen__bar {
     width: 100%;
     height: 40px;
     background-color: #161616;
     border-radius: 2px;
 }
 
-.loading-progress {
+.load-screen__progress {
     width: 0%;
     height: 100%;
     background-color: #dfaf00;
@@ -306,8 +290,8 @@ button:focus-visible {
     position: absolute;
     width: 100vw;
     height: 100dvh;
-    background-color: rgb(0, 0, 0, .4);
-    opacity: 0;         
+    background-color: rgb(0, 0, 0, 0.4);
+    opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
 }
@@ -382,17 +366,17 @@ button:focus-visible {
     background-color: #b89000;
 }
 
-.side-menu__nav {
+.site-nav {
     position: absolute;
     padding-top: 25px;
 }
 @media only screen and (max-width: 768px) {
-    .side-menu__nav {
+    .site-nav {
         padding-top: 0;
     }
 }
 
-.side-menu__nav > button {
+.site-nav__btn {
     height: 60px;
     width: 60px;
     font-size: 24px;
@@ -401,24 +385,24 @@ button:focus-visible {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.side-menu__nav > button:hover,
-.side-menu__nav > button:focus-visible {
+.site-nav__btn:hover,
+.site-nav__btn:focus-visible {
     background-color: #b89000;
 }
 
-.weapon_card_container {
+.weapon-class {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 24px;
     gap: 10px;
 }
 @media only screen and (max-width: 768px) {
-    .weapon_card_container {
+    .weapon-class {
         justify-content: center;
     }
 }
 
-.weapon_card {
+.weapon-card {
     display: block;
     position: relative;
     width: 90px;
@@ -434,25 +418,25 @@ button:focus-visible {
     user-select: none;
     overflow: hidden;
 }
-.weapon_card[data-selected="false"] {
+.weapon-card[data-selected="false"] {
     background-color: #2a2f35;
 }
 @media only screen and (max-width: 410px) {
-    .weapon_card {
+    .weapon-card {
         width: calc((100% - 30px) / 4);
     }
 }
 
-.weapon_card_class {
+.weapon-card--class {
     font-size: 18px;
 }
 @media only screen and (max-width: 768px) {
-    .weapon_card_class {
+    .weapon-card--class {
         font-size: 16px;
     }
 }
 
-.weapon_card_img {
+.weapon-card__img {
     display: block;
     width: 100%;
     height: 100%;
@@ -460,7 +444,7 @@ button:focus-visible {
     filter: drop-shadow(0 5px 0 #888888);
 }
 
-.weapon_card_name {
+.weapon-card__name {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -471,12 +455,12 @@ button:focus-visible {
     transition: opacity 0.1s;
 }
 @media only screen and (max-width: 768px) {
-    .weapon_card_name {
+    .weapon-card__name {
         opacity: 1;
     }
 }
 
-.weapon_card_class > .weapon_card_name {
+.weapon-card--class > .weapon-card__name {
     height: 100%;
     top: 0;
     display: flex;
@@ -484,11 +468,11 @@ button:focus-visible {
     align-items: center;
 }
 
-.weapon_card:hover .weapon_card_name,
-.weapon_card:focus-visible .weapon_card_name {
+.weapon-card:hover .weapon-card__name,
+.weapon-card:focus-visible .weapon-card__name {
     opacity: 1;
 }
 
-.weapon_card[data-selected="false"] .weapon_card_img {
+.weapon-card[data-selected="false"] .weapon-card__img {
     filter: grayscale(100%);
 }

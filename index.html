@@ -31,68 +31,61 @@
     </head>
     <body>
         <!-- WEAPON CONTENT -->
-        <div id="main_shell" class="shell">
-            <div class="weapon-container">
-                <div class="name-frame">
-                    <div id="weapon_name" class="name-container">Weapon Name</div>
+        <div id="main_shell" class="randomiser">
+            <div class="weapon">
+                <div class="weapon__heading">
+                    <div id="weapon_name" class="weapon__name">Weapon Name</div>
                 </div>
-                <div class="details-container">
-                    <div class="main-img">
-                        <div id="weapon_img" class="main-img-container"></div>
-                    </div>
-                    <div class="info-container">
-                        <div class="stats-container">
+                <div class="weapon__details">
+                    <div id="weapon_img" class="weapon__image"></div>
+                    <div class="weapon__info">
+                        <div class="weapon__stats">
                             <div class="stat">
-                                <div class="stat-label-container">
-                                    <div id="stat_name_1" class="stat-label">Stat 1</div>
-                                </div>
-                                <div class="stat-bar">
-                                    <div id="stat_val_1" class="stat-value"></div>
+                                <div id="stat_name_1" class="stat__label">Stat 1</div>
+                                <div class="stat__bar">
+                                    <div id="stat_val_1" class="stat__value"></div>
                                 </div>
                             </div>
                             <div class="stat">
-                                <div class="stat-label-container">
-                                    <div id="stat_name_2" class="stat-label">Stat 2</div>
-                                </div>
-                                <div class="stat-bar">
-                                    <div id="stat_val_2" class="stat-value"></div>
+                                <div id="stat_name_2" class="stat__label">Stat 2</div>
+                                <div class="stat__bar">
+                                    <div id="stat_val_2" class="stat__value"></div>
                                 </div>
                             </div>
                             <div class="stat">
-                                <div class="stat-label-container">
-                                    <div id="stat_name_3" class="stat-label">Stat 3</div>
-                                </div>
-                                <div class="stat-bar">
-                                    <div id="stat_val_3" class="stat-value"></div>
+                                <div id="stat_name_3" class="stat__label">Stat 3</div>
+                                <div class="stat__bar">
+                                    <div id="stat_val_3" class="stat__value"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="sub-container">
-                            <div class="sub-img">
-                                <div id="sub_img" class="img-container"></div>
+                        <div class="sub">
+                            <div class="sub__img-container">
+                                <div id="sub_img" class="sub__img"></div>
                             </div>
-                            <div id="sub_name" class="sub-name">Sub Weapon</div>
+                            <div id="sub_name" class="sub__name">Sub Weapon</div>
                         </div>
-                        <div class="special-container">
-                            <div class="special-img">
-                                <div id="special_img" class="img-container"></div>
+                        <div class="special">
+                            <div class="special__img-container">
+                                <div id="special_img" class="special__img"></div>
                             </div>
-                            <div id="special_name" class="special-name">Special Weapon</div>
+                            <div id="special_name" class="special__name">Special Weapon</div>
                         </div>
                     </div>
                 </div>
-                <div class="points-container">
-                    <div class="points-label">Points for Special</div>
-                    <div id="special_points" class="points-value">100p</div>
+                <div class="weapon__points">
+                    <div class="weapon__points-label">Points for Special</div>
+                    <div id="special_points" class="weapon__points-value">100p</div>
                 </div>
             </div>
-            <div class="button-container">
-                <button id="randomise_btn" class="randomise" disabled>Randomise</button>
+            <div class="randomiser__actions">
+                <button id="randomise_btn" class="randomiser__btn" disabled>Randomise</button>
             </div>
         </div>
 
-        <div id="side-menu__nav" class="side-menu__nav">
-            <button id="weapon_select_btn" class="">></button>
+        <!-- SITE NAV -->
+        <div id="site-nav" class="site-nav">
+            <button id="weapon_select_btn" class="site-nav__btn" title="Open Menu">></button>
         </div>
 
         <!-- SIDE MENU -->
@@ -102,20 +95,18 @@
                 <div class="side-menu__header">
                     <div class="side-menu__shell">
                         <div class="side-menu__title">Random Weapon Select</div>
-                        <button id="side-menu__close" class="side-menu__close">X</button>
+                        <button id="side-menu__close" class="side-menu__close" title="Close Menu">X</button>
                     </div>
                 </div>
                 <div class="side-menu__body">
-                    <div class="side-menu__shell">
-                        <div id="weapon_select_container" class="weapon_select_container">
-                            <div class="weapon_card_container">
-                                <button class="weapon_card weapon_card_class" data-selected="true" data-class="weapons">
-                                    <picture>
-                                        <img width="90" height="90" alt="" src="dist/images/class/All.webp" class="weapon_card_img" loading="lazy" />
-                                    </picture>
-                                    <span class="weapon_card_name">ALL<br />WEAPONS<br />ON</span>
-                                </button>
-                            </div>
+                    <div id="weapon_select_container" class="side-menu__shell">
+                        <div class="weapon-class">
+                            <button class="weapon-card weapon-card--class" data-selected="true" data-class="weapons">
+                                <picture>
+                                    <img width="90" height="90" alt="" src="dist/images/class/All.webp" class="weapon-card__img" loading="lazy" />
+                                </picture>
+                                <span class="weapon-card__name">ALL<br />WEAPONS<br />ON</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -123,14 +114,14 @@
         </div>
 
         <!-- LOADING SCREEN -->
-        <div id="loading_screen" class="loading-screen">
-            <div class="loading-shell">
-                <div class="loading-container">
-                    <div class="loading-text">Loading ...</div>
-                    <div id="loading_value" class="loading-value">0%</div>
+        <div id="loading_screen" class="load-screen">
+            <div class="load-screen__shell">
+                <div class="load-screen__container">
+                    <div class="load-screen__text">Loading ...</div>
+                    <div id="loading_value" class="load-screen__value">0%</div>
                 </div>
-                <div class="loading-bar">
-                    <div id="loading_bar" class="loading-progress"></div>
+                <div class="load-screen__bar">
+                    <div id="loading_bar" class="load-screen__progress"></div>
                 </div>
             </div>
         </div>

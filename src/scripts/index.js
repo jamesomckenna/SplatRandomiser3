@@ -26,8 +26,8 @@ window.addEventListener("load", (event) => {
     let side_menu_close = document.getElementById("side-menu__close");
     let side_menu_background = document.getElementById("side-menu__background");
     let weapon_select_container = document.getElementById("weapon_select_container");
-    let weapon_card_list = document.getElementsByClassName("weapon_card_weapon");
-    let weapon_card_class_list = document.getElementsByClassName("weapon_card_class");
+    let weapon_card_list = document.getElementsByClassName("weapon-card--weapon");
+    let weapon_card_class_list = document.getElementsByClassName("weapon-card--class");
 
     let weapon_list, sub_list, special_list, class_list;
     let data_promises = [];
@@ -186,15 +186,14 @@ window.addEventListener("load", (event) => {
         let card = document.createElement("button");
         let name = document.createElement("span");
 
-        card_container.classList.add("weapon_card_container");
+        card_container.classList.add("weapon-class");
         card_container.dataset.class = class_id;
-        card_container.dataset.selected = "true";
-        card.classList.add("weapon_card");
-        card.classList.add("weapon_card_class");
+        card.classList.add("weapon-card");
+        card.classList.add("weapon-card--class");
         card.dataset.selected = "true";
         card.dataset.class = class_id;
-        class_img_obj.classList.add("weapon_card_img");
-        name.classList.add("weapon_card_name");
+        class_img_obj.classList.add("weapon-card__img");
+        name.classList.add("weapon-card__name");
         name.innerHTML = "ALL<br>" + class_name.toUpperCase() + "<br>ON"
 
         card.appendChild(class_img_obj);
@@ -209,15 +208,15 @@ window.addEventListener("load", (event) => {
         let img = new Image(90, 90);
         let name = document.createElement("span");
 
-        card.classList.add("weapon_card");
-        card.classList.add("weapon_card_weapon");
+        card.classList.add("weapon-card");
+        card.classList.add("weapon-card--weapon");
         card.dataset.selected = "true";
         card.dataset.id = weapon_index;
         img.alt = "";
         img.src = "dist/images/weapons/" + weapon_list[weapon_index].img + "-small.webp";
-        img.classList.add("weapon_card_img");
+        img.classList.add("weapon-card__img");
         img.setAttribute("loading", "lazy");
-        name.classList.add("weapon_card_name");
+        name.classList.add("weapon-card__name");
 
         name.innerHTML = weapon_name;
         card.appendChild(img);
