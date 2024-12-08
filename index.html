@@ -92,24 +92,28 @@
         </div>
 
         <!-- SIDE NAV MENU -->
-        <div id="side_menu" class="side_menu">
-            <div id="side_menu_nav" class="side_menu_nav">
+        <div id="side-menu" class="side-menu">
+            <div id="side-menu__nav" class="side-menu__nav">
                 <button id="weapon_select_btn" class="">></button>
             </div>
-            <div id="side_menu_content" class="side_menu_content">
-                <div class="side_menu_header">
-                    <div class="side_menu_title">Random Weapon Select</div>
-                    <button id="side_menu_close" class="side_menu_close">X</button>
+            <div id="side-menu__content" class="side-menu__content">
+                <div class="side-menu__header">
+                    <div class="side-menu__shell">
+                        <div class="side-menu__title">Random Weapon Select</div>
+                        <button id="side-menu__close" class="side-menu__close">X</button>
+                    </div>
                 </div>
-                <div class="side_menu_body">
-                    <div id="weapon_select_container" class="weapon_select_container">
-                        <div class="weapon_card_container">
-                            <button class="weapon_card weapon_card_class" data-selected="true" data-class="weapons">
-                                <picture>
-                                    <img width="50" height="50" alt="All Weapons" src="dist/images/class/All.webp" class="weapon_card_img" />
-                                </picture>
-                                <div class="weapon_card_name">ALL<br />WEAPONS<br />ON</div>
-                            </button>
+                <div class="side-menu__body">
+                    <div class="side-menu__shell">
+                        <div id="weapon_select_container" class="weapon_select_container">
+                            <div class="weapon_card_container">
+                                <button class="weapon_card weapon_card_class" data-selected="true" data-class="weapons">
+                                    <picture>
+                                        <img width="90" height="90" alt="All Weapons" src="dist/images/class/All.webp" class="weapon_card_img" />
+                                    </picture>
+                                    <div class="weapon_card_name">ALL<br />WEAPONS<br />ON</div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

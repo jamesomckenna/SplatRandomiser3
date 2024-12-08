@@ -13,6 +13,12 @@ img {
     height: auto;
 }
 
+button {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 
 /********** WEAPON RANDOMISER **********/
 .shell {
@@ -232,10 +238,7 @@ img {
 }
 
 .randomise {
-    font-family: Splatoon2, Arial, Helvetica, sans-serif;
-    border: none;
     padding: 16px 36px;
-    cursor: pointer;
     font-size: 24px;
     background-color: #DFAF00;
     color: #161616;
@@ -291,12 +294,12 @@ img {
 
 
 /********** PAGE SIDE NAVIGATION **********/
-.side_menu{
+.side-menu{
     position: absolute;
     z-index: 10;
 }
 
-.side_menu_content {
+.side-menu__content {
     height: 100%;
     width: 0; 
     position: fixed; 
@@ -310,67 +313,69 @@ img {
     transform: translateX(-100%);
 }
 @media only screen and (max-width: 768px) {
-    .side_menu_content {
+    .side-menu__content {
         width: 100%;
     }
 }
 
-.side_menu_content.open {
+.side-menu__content.open {
     transform: translateX(0%);
 }
 
-.side_menu_header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+.side-menu__shell {
+    padding: 0 25px;
+}
+@media only screen and (max-width: 768px) {
+    .side-menu__shell {
+        padding: 0 10px;
+    }
 }
 
-.side_menu_title {
+.side-menu__header {
+    margin-bottom: 30px;
+    min-height: 60px;
+}
+
+.side-menu__title {
     font-family: Splatoon1, Arial, Helvetica, sans-serif;
-    padding: 16px 25px 0 25px;
+    margin-top: 16px;
+    padding-right: 70px;
     line-height: 1.4;
     word-wrap: break-word;
     white-space: normal;
 }
+@media only screen and (max-width: 768px) {
+    .side-menu__title {
+        margin-top: 10px;
+    }
+}
 
-.side_menu_close {
-    font-family: Splatoon2, Arial, Helvetica, sans-serif;
-    border: none;
-    height: 60px;
-    width: 60px;
+.side-menu__close {
+    position: absolute;
+    top: 0;
+    right: 0;
     min-height: 60px;
     min-width: 60px;
-    cursor: pointer;
     font-size: 24px;
     background-color: #DFAF00;
     color: #161616;
     border-bottom-left-radius: 5px;
-    align-self: flex-start;
 }
 
 
-.side_menu_body {
-    padding: 0 25px;
-}
-
-
-.side_menu_nav {
+.side-menu__nav {
     padding-top: 25px;
 }
 @media only screen and (max-width: 768px) {
-    .side_menu_nav {
+    .side-menu__nav {
         padding-top: 0;
     }
 }
 
 
-.side_menu_nav>button {
-    font-family: Splatoon2, Arial, Helvetica, sans-serif;
-    border: none;
+.side-menu__nav>button {
     height: 60px;
     width: 60px;
-    cursor: pointer;
     font-size: 24px;
     background-color: #DFAF00;
     color: #161616;
@@ -396,36 +401,40 @@ img {
     width: 90px;
     height: 90px;
     padding: 0;
-    border: none;
     border-radius: 5px;
+    color: inherit;
     background-color: #DDDDDD;
+    font-size: 12px;
     text-align: center;
     white-space: normal;
     line-height: 1.4;
     user-select: none;
     overflow: hidden;
-    color: inherit;
-    font-family: inherit;
 }
 .weapon_card[data-selected="false"] {
     background-color: #2A2F35;
 }
-
-.weapon_card_weapon {
-    font-size: 12px;
+@media only screen and (max-width: 768px) {
+    .weapon_card{
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .weapon_card_class {
     font-size: 18px;
 }
-.weapon_card_class[data-selected="false"] {
-    color: #DDDDDD;
+@media only screen and (max-width: 768px) {
+    .weapon_card_class {
+        font-size: 16px;
+    }
 }
 
 .weapon_card_img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     filter: drop-shadow(0 5px 0 #888888);
 }
 
@@ -450,10 +459,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.weapon_card:hover{
-    cursor: pointer;
 }
 
 .weapon_card:hover .weapon_card_name, 

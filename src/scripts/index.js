@@ -21,9 +21,9 @@ window.addEventListener("load", (event) => {
     let loading_bar = document.getElementById('loading_bar');
     let loading_value = document.getElementById('loading_value');
 
-    let side_menu_content = document.getElementById('side_menu_content');
+    let side_menu_content = document.getElementById('side-menu__content');
     let weapon_select_btn = document.getElementById('weapon_select_btn');
-    let side_menu_close = document.getElementById('side_menu_close');
+    let side_menu_close = document.getElementById('side-menu__close');
     let weapon_select_container = document.getElementById('weapon_select_container');
     let weapon_card_list = document.getElementsByClassName("weapon_card_weapon");
     let weapon_card_class_list = document.getElementsByClassName("weapon_card_class");
