@@ -184,7 +184,7 @@ window.addEventListener("load", (event) => {
     function add_weapon_class_group(class_id, class_name, class_img_obj) {
         let card_container = document.createElement("div");
         let card = document.createElement("button");
-        let name = document.createElement("div");
+        let name = document.createElement("span");
 
         card_container.classList.add("weapon_card_container");
         card_container.dataset.class = class_id;
@@ -207,7 +207,7 @@ window.addEventListener("load", (event) => {
     function add_weapon_checkbox(weapon_index, weapon_name, card_container) {
         let card = document.createElement("button");
         let img = new Image(90, 90);
-        let name = document.createElement("div");
+        let name = document.createElement("span");
 
         card.classList.add("weapon_card");
         card.classList.add("weapon_card_weapon");
