@@ -1,8 +1,8 @@
 body {
     font-family: Splatoon2, Arial, Helvetica, sans-serif;
     /* background-color: #3A3A3A; */
-    background-color: #2A2F35;
-    color: #FFFFFF;
+    background-color: #2a2f35;
+    color: #ffffff;
     margin: 0;
     font-size: 24px;
 }
@@ -18,7 +18,6 @@ button {
     font-family: inherit;
     cursor: pointer;
 }
-
 
 /********** WEAPON RANDOMISER **********/
 .shell {
@@ -46,7 +45,7 @@ button {
 }
 
 .name-frame {
-    background-color: #DFAF00;
+    background-color: #dfaf00;
     border-radius: 30px;
     padding: 1% 4% 1% 4%;
 }
@@ -78,18 +77,18 @@ button {
     width: 37%;
 }
 
-.main-img-container{
+.main-img-container {
     margin: 10% 8% 0 19%;
-    background-color: #DDDDDD;
+    background-color: #dddddd;
     border-radius: 30%;
 }
 
-.main-img-container>img{
+.main-img-container > img {
     filter: drop-shadow(0 5px 0 #888888);
 }
 
 @media only screen and (max-width: 768px) {
-    .main-img-container>img{
+    .main-img-container > img {
         margin: 0;
         width: 100%;
         height: auto;
@@ -142,12 +141,13 @@ button {
 .stat-value {
     width: 0%;
     height: 100%;
-    background-color: #DFAF00;
+    background-color: #dfaf00;
     border-radius: 2px;
 }
 
-.sub-container::before,.special-container::before {
-    content: '';
+.sub-container::before,
+.special-container::before {
+    content: "";
     position: absolute;
     right: 0;
     bottom: 0;
@@ -159,16 +159,16 @@ button {
     z-index: -1;
 }
 
-.sub-container,.special-container {
+.sub-container,
+.special-container {
     display: flex;
     margin: 1.2% 6.4% 2% 2.6%;
     height: 27.1%;
     position: relative;
-} 
+}
 
-
-
-.sub-img,.special-img {
+.sub-img,
+.special-img {
     display: block;
     width: 19.5%;
     background-color: #161616;
@@ -176,15 +176,16 @@ button {
     border-radius: 30%;
 }
 
-.sub-img>.img-container {
+.sub-img > .img-container {
     margin: 9% 13% 0 13%;
 }
 
-.special-img>.img-container {
+.special-img > .img-container {
     margin: 6% 9% 0 9%;
 }
 
-.sub-name,.special-name {
+.sub-name,
+.special-name {
     display: block;
     width: 80.5%;
     font-size: 34px;
@@ -194,7 +195,8 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
-    .sub-name,.special-name {
+    .sub-name,
+    .special-name {
         font-size: 4.5vw;
     }
 }
@@ -240,7 +242,7 @@ button {
 .randomise {
     padding: 16px 36px;
     font-size: 24px;
-    background-color: #DFAF00;
+    background-color: #dfaf00;
     color: #161616;
     border-radius: 5px;
 }
@@ -249,8 +251,6 @@ button {
     background-color: #b89000;
 }
 
-
-
 /********** LOADING PAGE **********/
 .loading-screen {
     position: absolute;
@@ -258,13 +258,13 @@ button {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #2A2F35;
+    background-color: #2a2f35;
     z-index: 20;
     display: flex;
     align-items: center;
 }
 
-.loading-shell{
+.loading-shell {
     max-width: 768px;
     width: 100%;
     margin: auto;
@@ -286,29 +286,26 @@ button {
 .loading-progress {
     width: 0%;
     height: 100%;
-    background-color: #DFAF00;
+    background-color: #dfaf00;
     border-radius: 2px;
 }
 
-
-
-
 /********** PAGE SIDE NAVIGATION **********/
-.side-menu{
+.side-menu {
     position: absolute;
     z-index: 10;
 }
 
 .side-menu__content {
     height: 100%;
-    width: 0; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
     background-color: #161616;
     overflow-x: hidden;
-    transition: 0.5s; 
+    transition: 0.5s;
     width: 768px;
     transform: translateX(-100%);
 }
@@ -357,11 +354,10 @@ button {
     min-height: 60px;
     min-width: 60px;
     font-size: 24px;
-    background-color: #DFAF00;
+    background-color: #dfaf00;
     color: #161616;
     border-bottom-left-radius: 5px;
 }
-
 
 .side-menu__nav {
     padding-top: 25px;
@@ -372,38 +368,37 @@ button {
     }
 }
 
-
-.side-menu__nav>button {
+.side-menu__nav > button {
     height: 60px;
     width: 60px;
     font-size: 24px;
-    background-color: #DFAF00;
+    background-color: #dfaf00;
     color: #161616;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-.weapon_card_container{
+.weapon_card_container {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 24px;
     gap: 10px;
 }
 @media only screen and (max-width: 768px) {
-    .weapon_card_container{
+    .weapon_card_container {
         justify-content: center;
     }
 }
 
 .weapon_card {
     display: block;
-    position: relative; 
+    position: relative;
     width: 90px;
-    height: 90px;
+    aspect-ratio: 1;
     padding: 0;
     border-radius: 5px;
     color: inherit;
-    background-color: #DDDDDD;
+    background-color: #dddddd;
     font-size: 12px;
     text-align: center;
     white-space: normal;
@@ -412,12 +407,11 @@ button {
     overflow: hidden;
 }
 .weapon_card[data-selected="false"] {
-    background-color: #2A2F35;
+    background-color: #2a2f35;
 }
-@media only screen and (max-width: 768px) {
-    .weapon_card{
-        width: 80px;
-        height: 80px;
+@media only screen and (max-width: 410px) {
+    .weapon_card {
+        width: calc((100% - 30px) / 4);
     }
 }
 
@@ -453,7 +447,7 @@ button {
     }
 }
 
-.weapon_card_class>.weapon_card_name{
+.weapon_card_class > .weapon_card_name {
     height: 100%;
     top: 0;
     display: flex;
@@ -461,11 +455,11 @@ button {
     align-items: center;
 }
 
-.weapon_card:hover .weapon_card_name, 
+.weapon_card:hover .weapon_card_name,
 .weapon_card:focus .weapon_card_name {
     opacity: 1;
 }
 
-.weapon_card[data-selected="false"] .weapon_card_img{
+.weapon_card[data-selected="false"] .weapon_card_img {
     filter: grayscale(100%);
 }
