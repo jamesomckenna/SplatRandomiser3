@@ -308,7 +308,7 @@ window.addEventListener("load", (event) => {
     });
 
     document.addEventListener("keydown", function (event) {
-        if (event.target === modal) {
+        if (event.key === "Escape") {
             close_side_menu();
         }
     });
