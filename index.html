@@ -31,79 +31,79 @@
     </head>
     <body>
         <!-- WEAPON CONTENT -->
-        <div id="main_shell" class="randomiser">
+        <div class="main" id="main_shell">
             <div class="weapon">
                 <div class="weapon__heading">
-                    <div id="weapon_name" class="weapon__name">Weapon Name</div>
+                    <div class="weapon__name" id="weapon_name">Weapon Name</div>
                 </div>
                 <div class="weapon__details">
-                    <div id="weapon_img" class="weapon__image"></div>
+                    <div class="weapon__image" id="weapon_img"></div>
                     <div class="weapon__info">
                         <div class="weapon__stats">
                             <div class="stat">
-                                <div id="stat_name_1" class="stat__label">Stat 1</div>
+                                <div class="stat__label" id="stat_name_1">Stat 1</div>
                                 <div class="stat__bar">
-                                    <div id="stat_val_1" class="stat__value"></div>
+                                    <div class="stat__value" id="stat_val_1"></div>
                                 </div>
                             </div>
                             <div class="stat">
-                                <div id="stat_name_2" class="stat__label">Stat 2</div>
+                                <div class="stat__label" id="stat_name_2">Stat 2</div>
                                 <div class="stat__bar">
-                                    <div id="stat_val_2" class="stat__value"></div>
+                                    <div class="stat__value" id="stat_val_2"></div>
                                 </div>
                             </div>
                             <div class="stat">
-                                <div id="stat_name_3" class="stat__label">Stat 3</div>
+                                <div class="stat__label" id="stat_name_3">Stat 3</div>
                                 <div class="stat__bar">
-                                    <div id="stat_val_3" class="stat__value"></div>
+                                    <div class="stat__value" id="stat_val_3" ></div>
                                 </div>
                             </div>
                         </div>
                         <div class="sub">
                             <div class="sub__img-container">
-                                <div id="sub_img" class="sub__img"></div>
+                                <div class="sub__img" id="sub_img"></div>
                             </div>
-                            <div id="sub_name" class="sub__name">Sub Weapon</div>
+                            <div class="sub__name" id="sub_name">Sub Weapon</div>
                         </div>
                         <div class="special">
                             <div class="special__img-container">
-                                <div id="special_img" class="special__img"></div>
+                                <div class="special__img" id="special_img"></div>
                             </div>
-                            <div id="special_name" class="special__name">Special Weapon</div>
+                            <div class="special__name" id="special_name">Special Weapon</div>
                         </div>
                     </div>
                 </div>
                 <div class="weapon__points">
                     <div class="weapon__points-label">Points for Special</div>
-                    <div id="special_points" class="weapon__points-value">100p</div>
+                    <div class="weapon__points-value" id="special_points">100p</div>
                 </div>
             </div>
-            <div class="randomiser__actions">
-                <button id="randomise_btn" class="randomiser__btn" disabled>Randomise</button>
+            <div class="footer">
+                <button class="btn" id="randomise_btn" disabled>Randomise</button>
             </div>
         </div>
 
         <!-- SITE NAV -->
-        <div id="site-nav" class="site-nav">
-            <button id="weapon_select_btn" class="site-nav__btn" title="Open Menu">></button>
+        <div class="site-nav" id="site-nav">
+            <button class="site-nav__btn" id="weapon_select_btn" title="Open Menu">></button>
         </div>
 
         <!-- SIDE MENU -->
-        <div id="side-menu" class="side-menu">
-            <div id="side-menu__background" class="side-menu__background"></div>
+        <div class="side-menu" id="side-menu">
+            <div class="side-menu__background" id="side-menu__background"></div>
             <div class="side-menu__content">
                 <div class="side-menu__header">
                     <div class="side-menu__shell">
                         <div class="side-menu__title">Random Weapon Select</div>
-                        <button id="side-menu__close" class="side-menu__close" title="Close Menu">X</button>
+                        <button class="side-menu__close" id="side-menu__close" title="Close Menu">X</button>
                     </div>
                 </div>
                 <div class="side-menu__body">
-                    <div id="weapon_select_container" class="side-menu__shell">
+                    <div class="side-menu__shell" id="weapon_select_container">
                         <div class="weapon-class">
                             <button class="weapon-card weapon-card--class" data-selected="true" data-class="weapons">
                                 <picture>
-                                    <img width="90" height="90" alt="" src="dist/images/class/All.webp" class="weapon-card__img" loading="lazy" />
+                                    <img class="weapon-card__img" width="90" height="90" alt="" src="dist/images/class/All.webp" loading="lazy" />
                                 </picture>
                                 <span class="weapon-card__name">ALL<br />WEAPONS<br />ON</span>
                             </button>
@@ -114,14 +114,14 @@
         </div>
 
         <!-- LOADING SCREEN -->
-        <div id="loading_screen" class="load-screen">
+        <div class="load-screen" id="loading_screen">
             <div class="load-screen__shell">
                 <div class="load-screen__container">
                     <div class="load-screen__text">Loading ...</div>
-                    <div id="loading_value" class="load-screen__value">0%</div>
+                    <div class="load-screen__value" id="loading_value">0%</div>
                 </div>
                 <div class="load-screen__bar">
-                    <div id="loading_bar" class="load-screen__progress"></div>
+                    <div class="load-screen__progress" id="loading_bar"></div>
                 </div>
             </div>
         </div>

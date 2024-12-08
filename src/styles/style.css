@@ -24,7 +24,7 @@ button:focus-visible {
 }
 
 /********** WEAPON RANDOMISER **********/
-.randomiser {
+.main {
     position: absolute;
     top: 0;
     left: 0;
@@ -222,13 +222,13 @@ button:focus-visible {
     padding-right: 8.2%;
 }
 
-.randomiser__actions {
+.footer {
     padding-top: 48px;
     padding-bottom: 24px;
     text-align: center;
 }
 
-.randomiser__btn {
+.btn {
     padding: 16px 36px;
     font-size: 24px;
     background-color: #dfaf00;
@@ -236,8 +236,8 @@ button:focus-visible {
     border-radius: 5px;
 }
 
-.randomiser__btn:hover,
-.randomiser__btn:focus-visible {
+.btn:hover,
+.btn:focus-visible {
     background-color: #b89000;
 }
 
