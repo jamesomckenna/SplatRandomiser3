@@ -216,6 +216,7 @@ window.addEventListener("load", (event) => {
         img.alt = weapon_name;
         img.src = 'dist/images/weapons/' + weapon_list[weapon_index].img + '-small.webp';
         img.classList.add("weapon_card_img");
+        img.setAttribute("loading", "lazy");
         name.classList.add("weapon_card_name");
 
         name.innerHTML = weapon_name;
