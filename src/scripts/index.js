@@ -62,9 +62,9 @@ window.addEventListener("load", (event) => {
             img_promises.push(class_list[key].img_obj.decode()
                 .then(() => {
                     update_load_screen();
-                })); 
+                }));
         }
- 
+
         weapon_list.sort(sort_weapons_alphabetically);
         weapon_list.forEach((weapon, index) => {
             let img_src = 'dist/images/weapons/' + weapon.img + '.webp';
@@ -134,7 +134,7 @@ window.addEventListener("load", (event) => {
                         this.dataset.selected = 'true';
                         toggle = 'ON'
                     }
-                    this.children[1].innerHTML = 'ALL <br>'+ this.dataset.class.toUpperCase() +'<br>' + toggle;
+                    this.children[1].innerHTML = 'ALL <br>' + this.dataset.class.toUpperCase() + '<br>' + toggle;
 
                     let class_group = this.dataset.class;
                     let selected = this.dataset.selected;
@@ -142,13 +142,13 @@ window.addEventListener("load", (event) => {
                     for (let j = 0; j < weapon_card_list.length; j++) {
                         if (weapon_list[weapon_card_list[j].dataset.id].class == class_group || class_group == 'weapons') {
                             weapon_card_list[j].dataset.selected = selected;
-                        } 
+                        }
                     }
 
-                    if(class_group == 'weapons'){
+                    if (class_group == 'weapons') {
                         for (let j = 0; j < weapon_card_class_list.length; j++) {
                             weapon_card_class_list[j].dataset.selected = selected;
-                            weapon_card_class_list[j].children[1].innerHTML = 'ALL <br>'+ weapon_card_class_list[j].dataset.class.toUpperCase() +'<br>' + toggle;
+                            weapon_card_class_list[j].children[1].innerHTML = 'ALL <br>' + weapon_card_class_list[j].dataset.class.toUpperCase() + '<br>' + toggle;
                         }
                     }
                 });
@@ -182,37 +182,32 @@ window.addEventListener("load", (event) => {
 
     function add_weapon_class_group(class_id, class_name, class_img_obj) {
         let card_container = document.createElement("div");
-        let shell = document.createElement("div");
-        let card = document.createElement("div");
+        let card = document.createElement("button");
         let name = document.createElement("div");
 
         card_container.classList.add("weapon_card_container");
         card_container.dataset.class = class_id;
         card_container.dataset.selected = 'true';
-        shell.classList.add("weapon_card_shell");
         card.classList.add("weapon_card");
         card.classList.add("weapon_card_class");
         card.dataset.selected = 'true';
         card.dataset.class = class_id;
         class_img_obj.classList.add("weapon_card_img");
         name.classList.add("weapon_card_name");
-        name.innerHTML = 'ALL<br>'+class_name.toUpperCase() + '<br>ON'
+        name.innerHTML = 'ALL<br>' + class_name.toUpperCase() + '<br>ON'
 
         card.appendChild(class_img_obj);
         card.appendChild(name);
-        shell.appendChild(card);
-        card_container.appendChild(shell);
+        card_container.appendChild(card);
         weapon_select_container.appendChild(card_container);
         return card_container;
     }
 
     function add_weapon_checkbox(weapon_index, weapon_name, card_container) {
-        let shell = document.createElement("div");
-        let card = document.createElement("div");
+        let card = document.createElement("button");
         let img = new Image(90, 90);
         let name = document.createElement("div");
 
-        shell.classList.add("weapon_card_shell");
         card.classList.add("weapon_card");
         card.classList.add("weapon_card_weapon");
         card.dataset.selected = 'true';
@@ -225,8 +220,7 @@ window.addEventListener("load", (event) => {
         name.innerHTML = weapon_name;
         card.appendChild(img);
         card.appendChild(name);
-        shell.appendChild(card);
-        card_container.appendChild(shell);
+        card_container.appendChild(card);
     }
 
 

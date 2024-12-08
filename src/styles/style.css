@@ -381,7 +381,8 @@ img {
 .weapon_card_container{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -5px 20px -5px;
+    margin-bottom: 24px;
+    gap: 10px;
 }
 @media only screen and (max-width: 768px) {
     .weapon_card_container{
@@ -389,32 +390,32 @@ img {
     }
 }
 
-.weapon_card_shell {
-    width: 100px;
-    margin: 5px 0;
-}
-
 .weapon_card {
-    margin: 0 5px;
-    background-color: #DDDDDD;
-    text-align: center;
     display: block;
     position: relative; 
-    white-space: normal;
+    width: 90px;
+    height: 90px;
+    padding: 0;
+    border: none;
     border-radius: 5px;
+    background-color: #DDDDDD;
+    text-align: center;
+    white-space: normal;
     line-height: 1.4;
     user-select: none;
+    overflow: hidden;
+    color: inherit;
+    font-family: inherit;
 }
 .weapon_card[data-selected="false"] {
     background-color: #2A2F35;
 }
 
-.weapon_card_weapon{
+.weapon_card_weapon {
     font-size: 12px;
 }
 
 .weapon_card_class {
-    height: 90px;
     font-size: 18px;
 }
 .weapon_card_class[data-selected="false"] {
@@ -455,12 +456,11 @@ img {
     cursor: pointer;
 }
 
-.weapon_card:hover .weapon_card_name{
+.weapon_card:hover .weapon_card_name, 
+.weapon_card:focus .weapon_card_name {
     opacity: 1;
 }
-
 
 .weapon_card[data-selected="false"] .weapon_card_img{
     filter: grayscale(100%);
 }
-
