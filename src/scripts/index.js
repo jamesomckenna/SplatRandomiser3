@@ -21,9 +21,10 @@ window.addEventListener("load", (event) => {
     let loading_bar = document.getElementById('loading_bar');
     let loading_value = document.getElementById('loading_value');
 
-    let side_menu_content = document.getElementById('side-menu__content');
+    let side_menu = document.getElementById('side-menu');
     let weapon_select_btn = document.getElementById('weapon_select_btn');
     let side_menu_close = document.getElementById('side-menu__close');
+    let side_menu_background = document.getElementById('side-menu__background');
     let weapon_select_container = document.getElementById('weapon_select_container');
     let weapon_card_list = document.getElementsByClassName("weapon_card_weapon");
     let weapon_card_class_list = document.getElementsByClassName("weapon_card_class");
@@ -276,7 +277,10 @@ window.addEventListener("load", (event) => {
     }
 
     function close_side_menu() {
-        side_menu_content.classList.remove("open");
+        side_menu.classList.remove("open");
+        side_menu.setAttribute("inert", "");
+        main_shell.removeAttribute("inert");
+        weapon_select_btn.removeAttribute("inert");
     }
 
 
@@ -287,7 +291,10 @@ window.addEventListener("load", (event) => {
 
     // open weapon select side menu
     weapon_select_btn.addEventListener("click", function () {
-        side_menu_content.classList.add("open");
+        side_menu.classList.add("open");
+        side_menu.removeAttribute("inert");
+        main_shell.setAttribute("inert", "");
+        weapon_select_btn.setAttribute("inert", "");
     });
 
     // close side menu
@@ -295,8 +302,13 @@ window.addEventListener("load", (event) => {
         close_side_menu();
     });
 
-    main_shell.addEventListener("click", function () {
+    side_menu_background.addEventListener("click", function () {
         close_side_menu();
     });
 
+    document.addEventListener('keydown', function(event) {
+        if (event.target === modal) {
+            close_side_menu();
+        }
+    });
 });
