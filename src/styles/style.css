@@ -19,6 +19,11 @@ button {
     cursor: pointer;
 }
 
+button:focus-visible {
+    outline: solid 1px #fff;
+    outline-offset: 2px;
+}
+
 /********** WEAPON RANDOMISER **********/
 .shell {
     position: absolute;
@@ -247,7 +252,8 @@ button {
     border-radius: 5px;
 }
 
-.randomise:hover {
+.randomise:hover,
+.randomise:focus-visible {
     background-color: #b89000;
 }
 
@@ -358,6 +364,10 @@ button {
     color: #161616;
     border-bottom-left-radius: 5px;
 }
+.side-menu__close:hover,
+.side-menu__close:focus-visible {
+    background-color: #b89000;
+}
 
 .side-menu__nav {
     padding-top: 25px;
@@ -376,6 +386,10 @@ button {
     color: #161616;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+.side-menu__nav > button:hover,
+.side-menu__nav > button:focus-visible {
+    background-color: #b89000;
 }
 
 .weapon_card_container {
@@ -456,7 +470,7 @@ button {
 }
 
 .weapon_card:hover .weapon_card_name,
-.weapon_card:focus .weapon_card_name {
+.weapon_card:focus-visible .weapon_card_name {
     opacity: 1;
 }
 
