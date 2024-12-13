@@ -183,3 +183,12 @@ function build() {
 }
 
 build();
+
+
+//TODO
+// Update weapon select styling
+// - Update class names
+// Update random weapon button
+// - Add counter to show how many weapons are avaliable
+// - Add button to remove current weapon from weapon selection
+// Add animated background

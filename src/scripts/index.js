@@ -1,7 +1,7 @@
 window.addEventListener("load", (event) => {
     console.log("Page Loaded");
 
-    let main_shell = document.getElementById("main_shell");
+    let main = document.getElementById("main");
     let randomise_btn = document.getElementById("randomise_btn");
     let weapon_name = document.getElementById("weapon_name");
     let weapon_img = document.getElementById("weapon_img");
@@ -22,9 +22,9 @@ window.addEventListener("load", (event) => {
     let loading_value = document.getElementById("loading_value");
 
     let side_menu = document.getElementById("side-menu");
-    let weapon_select_btn = document.getElementById("weapon_select_btn");
-    let side_menu_close = document.getElementById("side-menu__close");
-    let side_menu_background = document.getElementById("side-menu__background");
+    let side_menu_open = document.getElementById("side_menu_open");
+    let side_menu_close = document.getElementById("side_menu_close");
+    let side_menu_background = document.getElementById("side_menu_background");
     let weapon_select_container = document.getElementById("weapon_select_container");
     let weapon_card_list = document.getElementsByClassName("weapon-card--weapon");
     let weapon_card_class_list = document.getElementsByClassName("weapon-card--class");
@@ -279,8 +279,8 @@ window.addEventListener("load", (event) => {
     function close_side_menu() {
         side_menu.classList.remove("open");
         side_menu.setAttribute("inert", "");
-        main_shell.removeAttribute("inert");
-        weapon_select_btn.removeAttribute("inert");
+        main.removeAttribute("inert");
+        side_menu_open.removeAttribute("inert");
     }
 
 
@@ -290,11 +290,11 @@ window.addEventListener("load", (event) => {
     });
 
     // open weapon select side menu
-    weapon_select_btn.addEventListener("click", function () {
+    side_menu_open.addEventListener("click", function () {
         side_menu.classList.add("open");
         side_menu.removeAttribute("inert");
-        main_shell.setAttribute("inert", "");
-        weapon_select_btn.setAttribute("inert", "");
+        main.setAttribute("inert", "");
+        side_menu_open.setAttribute("inert", "");
     });
 
     // close side menu
