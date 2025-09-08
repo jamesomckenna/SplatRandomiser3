@@ -249,7 +249,7 @@
     "class": "rollers",
     "img": "Big_Swig_Roller",
     "stats": [56, 54, 60],
-    "points": 190
+    "points": 180
   },
   {
     "name": "Big Swig Roller Express",
@@ -258,7 +258,7 @@
     "class": "rollers",
     "img": "Big_Swig_Roller_Express",
     "stats": [56, 54, 60],
-    "points": 190
+    "points": 180
   },
   {
     "name": "Carbon Roller",
@@ -420,7 +420,7 @@
     "class": "sloshers",
     "img": "Explosher",
     "stats": [77, 65, 20],
-    "points": 200
+    "points": 190
   },
   {
     "name": "Slosher",
@@ -609,7 +609,7 @@
     "class": "brellas",
     "img": "Splat_Brella",
     "stats": [43, 65, 60],
-    "points": 200
+    "points": 210
   },
   {
     "name": "Tenta Brella",
@@ -879,7 +879,7 @@
     "class": "brellas",
     "img": "Sorella_Brella",
     "stats": [43, 65, 60],
-    "points": 190
+    "points": 210
   },
   {
     "name": "Custom Blaster",
@@ -978,7 +978,7 @@
     "class": "brellas",
     "img": "Order_Brella_Replica",
     "stats": [43, 65, 60],
-    "points": 200
+    "points": 210
   },
   {
     "name": "Order Charger Replica",
@@ -1059,7 +1059,7 @@
     "class": "brushes",
     "img": "Orderbrush_Replica",
     "stats": [23, 80, 85],
-    "points": 200
+    "points": 190
   },
   {
     "name": "Octo Shot Replica",
@@ -1167,7 +1167,7 @@
     "class": "splatlings",
     "img": "Nautilus_79",
     "stats": [74, 37, 70],
-    "points": 210
+    "points": 200
   },
   {
     "name": "New Squiffer",
@@ -1230,7 +1230,7 @@
     "class": "chargers",
     "img": "Bamboozler_14_Mk_II",
     "stats": [78, 90, 80],
-    "points": 200
+    "points": 190
   },
   {
     "name": "Custom Douser Dualies FF",
@@ -1338,7 +1338,7 @@
     "class": "rollers",
     "img": "Carbon_Roller_ANG-L",
     "stats": [20, 63, 65],
-    "points": 180
+    "points": 170
   },
   {
     "name": "Painbrush BRN-Z",
@@ -1347,7 +1347,7 @@
     "class": "brushes",
     "img": "Painbrush_BRN-Z",
     "stats": [33, 85, 60],
-    "points": 180
+    "points": 190
   },
   {
     "name": "Splat Charger CAM-O",
@@ -1383,7 +1383,7 @@
     "class": "splatlings",
     "img": "Mini_Splatling_RTL-R",
     "stats": [62, 80, 90],
-    "points": 190
+    "points": 200
   },
   {
     "name": "Dapple Dualies NOC-T",
@@ -1401,7 +1401,7 @@
     "class": "brellas",
     "img": "Tenta_Brella_CRE-M",
     "stats": [62, 85, 85],
-    "points": 190
+    "points": 180
   },
   {
     "name": "REEF-LUX 450 MIL-K",
@@ -1410,7 +1410,7 @@
     "class": "stringers",
     "img": "REEF-LUX_450_MIL-K",
     "stats": [60, 75, 60],
-    "points": 200
+    "points": 210
   },
   {
     "name": "Splatana Wiper RUS-T",
@@ -1491,7 +1491,7 @@
     "class": "brushes",
     "img": "Cometz_Octobrush",
     "stats": [23, 80, 85],
-    "points": 200
+    "points": 190
   },
   {
     "name": "Hornz Dread Wringer",
